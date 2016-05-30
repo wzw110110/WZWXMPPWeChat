@@ -10,5 +10,11 @@
 #define PrefixHeader_pch
 
 #import "Masonry.h"
+#import "XMPPFramework.h"
+#import "Singleton.h"
+#import "Macros.h"
+#import "XMPPTool.h"
+#import "MBProgressHUD+HM.h"
+#import "WZWAccount.h"
 
 #endif /* PrefixHeader_pch */

@@ -11,5 +11,8 @@
 @interface LoginView : UIView
 
 @property (nonatomic,strong) UIButton * cancelBtn;
+@property (nonatomic,strong) UIButton * loginBtn;
+@property (nonatomic,strong) UITextField * username;
+@property (nonatomic,strong) UITextField * pwd;
 
 @end

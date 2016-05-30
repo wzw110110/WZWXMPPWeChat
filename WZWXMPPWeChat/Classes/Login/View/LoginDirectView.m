@@ -90,8 +90,12 @@
         make.bottom.equalTo(self.mas_bottom).offset(-15);
         make.height.mas_equalTo(20);
     }];
-
 }
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self endEditing:YES];
+}
+
 
 
 @end

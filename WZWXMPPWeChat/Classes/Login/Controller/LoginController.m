@@ -42,7 +42,6 @@
 
 //actionSheet代理方法
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSLog(@"%d",buttonIndex);
     if (buttonIndex == 0) {
         LoginWithNewAccountController * loginNewVC = [[LoginWithNewAccountController alloc]init];
         [self presentViewController:loginNewVC animated:YES completion:nil];

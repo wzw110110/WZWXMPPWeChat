@@ -24,12 +24,17 @@
     WZWTabbarController * wzwTabbar = [[WZWTabbarController alloc]init];
     LoginController * loginVC = [[LoginController alloc]init];
     LoginWithNewAccountController * loginNewVC = [[LoginWithNewAccountController alloc]init];
-    RegisterController * registerVC = [[RegisterController alloc]init];
-//    self.window.rootViewController = wzwTabbar;
-    
-    self.window.rootViewController = loginVC;
 //    self.window.rootViewController = loginNewVC;
-//    self.window.rootViewController = registerVC;
+    if ([WZWAccount shareAccount].haveLogined) {
+        self.window.rootViewController = wzwTabbar;
+        [[XMPPTool sharedXMPPTool] xmppLogin:nil];
+    }else{
+        self.window.rootViewController = loginVC;
+    }
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSLog(@"%@",paths[0]);
+
     
     return YES;
 }

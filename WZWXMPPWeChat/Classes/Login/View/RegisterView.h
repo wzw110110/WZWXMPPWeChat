@@ -11,5 +11,8 @@
 @interface RegisterView : UIView
 
 @property (nonatomic,strong) UIButton * cancelBtn;
+@property (nonatomic,strong) UITextField * username;
+@property (nonatomic,strong) UITextField * pwd;
+@property (nonatomic,strong) UIButton * registerBtn;
 
 @end
