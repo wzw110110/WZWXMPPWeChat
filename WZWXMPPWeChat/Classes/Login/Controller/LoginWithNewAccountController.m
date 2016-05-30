@@ -9,6 +9,7 @@
 #import "LoginWithNewAccountController.h"
 #import "LoginView.h"
 #import "WZWTabbarController.h"
+#import "XMPPvCardTemp.h"
 
 @interface LoginWithNewAccountController ()
 
@@ -49,9 +50,14 @@
     
     [MBProgressHUD showMessage:@"正在登录"];
     
-    //把用户名和密码放在单例中
+    //把用户名、头像和密码放在单例中
     [WZWAccount shareAccount].loginUser = _loginView.username.text;
     [WZWAccount shareAccount].loginPwd = _loginView.pwd.text;
+    //通过头像模块，查找头像
+    XMPPvCardTemp * myVCard = [XMPPTool sharedXMPPTool].vCard.myvCardTemp;
+    if (myVCard.photo) {
+        [WZWAccount shareAccount].photoData = myVCard.photo;
+    }
     
     //弱化self
     __weak typeof(self) weakSelf = self;

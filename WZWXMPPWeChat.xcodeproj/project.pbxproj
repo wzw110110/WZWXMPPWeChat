@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B314A3B31CFBE320009FB6E3 /* DefaultHead.png in Resources */ = {isa = PBXBuildFile; fileRef = B314A3B21CFBE320009FB6E3 /* DefaultHead.png */; };
+		B314A3B61CFBE3F2009FB6E3 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = B314A3B51CFBE3F2009FB6E3 /* ProfileController.m */; };
+		B314A3B91CFBE516009FB6E3 /* barbuttonicon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B314A3B71CFBE516009FB6E3 /* barbuttonicon_back.png */; };
+		B314A3BA1CFBE516009FB6E3 /* barbuttonicon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B314A3B81CFBE516009FB6E3 /* barbuttonicon_back@2x.png */; };
+		B314A3BC1CFC1340009FB6E3 /* ScanDetailCellBgWithArrowLast.png in Resources */ = {isa = PBXBuildFile; fileRef = B314A3BB1CFC1340009FB6E3 /* ScanDetailCellBgWithArrowLast.png */; };
+		B314A3C71CFC1476009FB6E3 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B314A3C51CFC1476009FB6E3 /* TitleCell.m */; };
+		B314A3CC1CFC1483009FB6E3 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B314A3CA1CFC1483009FB6E3 /* PhotoCell.m */; };
+		B314A3CF1CFC21CF009FB6E3 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B314A3CE1CFC21CF009FB6E3 /* libidn.a */; };
+		B314A3D21CFC255F009FB6E3 /* UpdateInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B314A3D11CFC255F009FB6E3 /* UpdateInfoController.m */; };
+		B314A3D51CFC3901009FB6E3 /* UpdateInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B314A3D41CFC3901009FB6E3 /* UpdateInfoCell.m */; };
 		B36373021CF7D4F6002A02BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B36373011CF7D4F6002A02BC /* main.m */; };
 		B36373081CF7D4F6002A02BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36373071CF7D4F6002A02BC /* ViewController.m */; };
 		B363730B1CF7D4F6002A02BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36373091CF7D4F6002A02BC /* Main.storyboard */; };
@@ -193,7 +203,6 @@
 		B36377DE1CF82115002A02BC /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377571CF82115002A02BC /* DDXMLElement.m */; };
 		B36377DF1CF82115002A02BC /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377591CF82115002A02BC /* DDXMLNode.m */; };
 		B36377E01CF82115002A02BC /* build-libidn.sh in Resources */ = {isa = PBXBuildFile; fileRef = B363775D1CF82115002A02BC /* build-libidn.sh */; };
-		B36377E11CF82115002A02BC /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B363775F1CF82115002A02BC /* libidn.a */; };
 		B36377E31CF823C4002A02BC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B36377E21CF823C4002A02BC /* libresolv.tbd */; };
 		B36377E91CF825D3002A02BC /* XMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377E81CF825D3002A02BC /* XMPPTool.m */; };
 		B36377F11CF83700002A02BC /* WZWAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377F01CF83700002A02BC /* WZWAccount.m */; };
@@ -220,6 +229,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B314A3B21CFBE320009FB6E3 /* DefaultHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultHead.png; sourceTree = "<group>"; };
+		B314A3B41CFBE3F2009FB6E3 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
+		B314A3B51CFBE3F2009FB6E3 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
+		B314A3B71CFBE516009FB6E3 /* barbuttonicon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barbuttonicon_back.png; sourceTree = "<group>"; };
+		B314A3B81CFBE516009FB6E3 /* barbuttonicon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barbuttonicon_back@2x.png"; sourceTree = "<group>"; };
+		B314A3BB1CFC1340009FB6E3 /* ScanDetailCellBgWithArrowLast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScanDetailCellBgWithArrowLast.png; sourceTree = "<group>"; };
+		B314A3C41CFC1476009FB6E3 /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
+		B314A3C51CFC1476009FB6E3 /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
+		B314A3C91CFC1483009FB6E3 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		B314A3CA1CFC1483009FB6E3 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		B314A3CE1CFC21CF009FB6E3 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libidn.a; sourceTree = "<group>"; };
+		B314A3D01CFC255F009FB6E3 /* UpdateInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateInfoController.h; sourceTree = "<group>"; };
+		B314A3D11CFC255F009FB6E3 /* UpdateInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateInfoController.m; sourceTree = "<group>"; };
+		B314A3D31CFC3901009FB6E3 /* UpdateInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateInfoCell.h; sourceTree = "<group>"; };
+		B314A3D41CFC3901009FB6E3 /* UpdateInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateInfoCell.m; sourceTree = "<group>"; };
 		B36372FD1CF7D4F6002A02BC /* WZWXMPPWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZWXMPPWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36373011CF7D4F6002A02BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B36373061CF7D4F6002A02BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -598,9 +622,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B314A3CF1CFC21CF009FB6E3 /* libidn.a in Frameworks */,
 				B36377E31CF823C4002A02BC /* libresolv.tbd in Frameworks */,
 				B36375DF1CF81B9A002A02BC /* libxml2.tbd in Frameworks */,
-				B36377E11CF82115002A02BC /* libidn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +645,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B314A3B11CFBE318009FB6E3 /* default */ = {
+			isa = PBXGroup;
+			children = (
+				B314A3BB1CFC1340009FB6E3 /* ScanDetailCellBgWithArrowLast.png */,
+				B314A3B71CFBE516009FB6E3 /* barbuttonicon_back.png */,
+				B314A3B81CFBE516009FB6E3 /* barbuttonicon_back@2x.png */,
+				B314A3B21CFBE320009FB6E3 /* DefaultHead.png */,
+			);
+			path = default;
+			sourceTree = "<group>";
+		};
+		B314A3BD1CFC1370009FB6E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B314A3C41CFC1476009FB6E3 /* TitleCell.h */,
+				B314A3C51CFC1476009FB6E3 /* TitleCell.m */,
+				B314A3C91CFC1483009FB6E3 /* PhotoCell.h */,
+				B314A3CA1CFC1483009FB6E3 /* PhotoCell.m */,
+				B314A3D31CFC3901009FB6E3 /* UpdateInfoCell.h */,
+				B314A3D41CFC3901009FB6E3 /* UpdateInfoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B36372F41CF7D4F6002A02BC = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +785,7 @@
 		B36373391CF7D5B5002A02BC /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				B314A3B11CFBE318009FB6E3 /* default */,
 				B36373B51CF7E9DB002A02BC /* tabbar */,
 				B36373421CF7D6C9002A02BC /* icon */,
 				B36373491CF7D6C9002A02BC /* toolbar */,
@@ -855,6 +904,7 @@
 			isa = PBXGroup;
 			children = (
 				B36373721CF7D78E002A02BC /* Controller */,
+				B314A3BD1CFC1370009FB6E3 /* View */,
 			);
 			name = "Me(我)";
 			path = Me;
@@ -865,6 +915,10 @@
 			children = (
 				B36373831CF7DA6C002A02BC /* MeController.h */,
 				B36373841CF7DA6C002A02BC /* MeController.m */,
+				B314A3B41CFBE3F2009FB6E3 /* ProfileController.h */,
+				B314A3B51CFBE3F2009FB6E3 /* ProfileController.m */,
+				B314A3D01CFC255F009FB6E3 /* UpdateInfoController.h */,
+				B314A3D11CFC255F009FB6E3 /* UpdateInfoController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -982,6 +1036,7 @@
 		B36376141CF82115002A02BC /* XMPP */ = {
 			isa = PBXGroup;
 			children = (
+				B314A3CE1CFC21CF009FB6E3 /* libidn.a */,
 				B36376151CF82115002A02BC /* Authentication */,
 				B363762C1CF82115002A02BC /* Categories */,
 				B36376331CF82115002A02BC /* Core */,
@@ -1887,6 +1942,7 @@
 				TargetAttributes = {
 					B36372FC1CF7D4F6002A02BC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F6VLWWHH2V;
 					};
 					B36373151CF7D4F6002A02BC = {
 						CreatedOnToolsVersion = 7.2;
@@ -1925,9 +1981,12 @@
 			files = (
 				B36373531CF7D6C9002A02BC /* AppIcon76x76~ipad.png in Resources */,
 				B36373D11CF7E9DB002A02BC /* tabbar_mainframeHL@3x.png in Resources */,
+				B314A3B91CFBE516009FB6E3 /* barbuttonicon_back.png in Resources */,
 				B36373CA1CF7E9DB002A02BC /* tabbar_discover@2x.png in Resources */,
 				B36373501CF7D6C9002A02BC /* AppIcon60x60@2x.png in Resources */,
+				B314A3BC1CFC1340009FB6E3 /* ScanDetailCellBgWithArrowLast.png in Resources */,
 				B363735A1CF7D6C9002A02BC /* AlbumAddBtnHL.png in Resources */,
+				B314A3B31CFBE320009FB6E3 /* DefaultHead.png in Resources */,
 				B36373511CF7D6C9002A02BC /* AppIcon60x60@3x.png in Resources */,
 				B36373D21CF7E9DB002A02BC /* tabbar_me@2x.png in Resources */,
 				B36373FF1CF7F768002A02BC /* AlbumCommentHorizontalLine.png in Resources */,
@@ -1949,6 +2008,7 @@
 				B363730D1CF7D4F6002A02BC /* Assets.xcassets in Resources */,
 				B36373CE1CF7E9DB002A02BC /* tabbar_mainframe@2x.png in Resources */,
 				B36373551CF7D6C9002A02BC /* Album_ToolViewEmotion.png in Resources */,
+				B314A3BA1CFBE516009FB6E3 /* barbuttonicon_back@2x.png in Resources */,
 				B36373521CF7D6C9002A02BC /* AppIcon76x76@2x~ipad.png in Resources */,
 				B36377F91CF83D83002A02BC /* MBProgressHUD.bundle in Resources */,
 				B36373541CF7D6C9002A02BC /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
@@ -2004,6 +2064,7 @@
 				B36377631CF82115002A02BC /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				B36377CA1CF82115002A02BC /* XMPPMessage+XEP_0308.m in Sources */,
 				B36377B81CF82115002A02BC /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
+				B314A3C71CFC1476009FB6E3 /* TitleCell.m in Sources */,
 				B36377B41CF82115002A02BC /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
 				B363777E1CF82115002A02BC /* XMPPResourceMemoryStorageObject.m in Sources */,
 				B363776C1CF82115002A02BC /* XMPPElement.m in Sources */,
@@ -2017,6 +2078,7 @@
 				B36373761CF7D8ED002A02BC /* WZWTabbarController.m in Sources */,
 				B36377681CF82115002A02BC /* XMPPXOAuth2Google.m in Sources */,
 				B36377891CF82115002A02BC /* XMPPRoom.xcdatamodeld in Sources */,
+				B314A3CC1CFC1483009FB6E3 /* PhotoCell.m in Sources */,
 				B36377951CF82115002A02BC /* XMPPMUC.m in Sources */,
 				B36377671CF82115002A02BC /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				B36377C21CF82115002A02BC /* XMPPPing.m in Sources */,
@@ -2024,6 +2086,7 @@
 				B363777A1CF82115002A02BC /* XMPPResourceCoreDataStorageObject.m in Sources */,
 				B36377A81CF82115002A02BC /* TURNSocket.m in Sources */,
 				B36377D11CF82115002A02BC /* XMPPSRVResolver.m in Sources */,
+				B314A3D21CFC255F009FB6E3 /* UpdateInfoController.m in Sources */,
 				B36373791CF7D929002A02BC /* BaseViewController.m in Sources */,
 				B363737C1CF7DA33002A02BC /* MainFrameController.m in Sources */,
 				B36373851CF7DA6C002A02BC /* MeController.m in Sources */,
@@ -2077,6 +2140,7 @@
 				B36377791CF82115002A02BC /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				B36373F51CF7EF33002A02BC /* MASConstraintMaker.m in Sources */,
 				B363776E1CF82115002A02BC /* XMPPJID.m in Sources */,
+				B314A3B61CFBE3F2009FB6E3 /* ProfileController.m in Sources */,
 				B36377721CF82115002A02BC /* XMPPPresence.m in Sources */,
 				B363778B1CF82115002A02BC /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				B36377BC1CF82115002A02BC /* XMPPMessage+XEP_0172.m in Sources */,
@@ -2100,6 +2164,7 @@
 				B36377831CF82115002A02BC /* XMPPIQ+JabberRPC.m in Sources */,
 				B363740F1CF80745002A02BC /* RegisterView.m in Sources */,
 				B36374091CF80277002A02BC /* LoginView.m in Sources */,
+				B314A3D51CFC3901009FB6E3 /* UpdateInfoCell.m in Sources */,
 				B36377CD1CF82115002A02BC /* DDList.m in Sources */,
 				B36377AF1CF82115002A02BC /* XMPPTransports.m in Sources */,
 				B36377861CF82115002A02BC /* XMPPIQ+LastActivity.m in Sources */,
@@ -2273,6 +2338,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZWXMPPWeChat/Resource/Global/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -2282,6 +2349,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WZWXMPPWeChat/Vender/XMPP/Vendor/libidn",
+					"$(PROJECT_DIR)/WZWXMPPWeChat/Vender/XMPP",
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = PuSai.WZWXMPPWeChat;
@@ -2293,6 +2361,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZWXMPPWeChat/Resource/Global/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -2302,6 +2372,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WZWXMPPWeChat/Vender/XMPP/Vendor/libidn",
+					"$(PROJECT_DIR)/WZWXMPPWeChat/Vender/XMPP",
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = PuSai.WZWXMPPWeChat;

@@ -10,6 +10,7 @@
 #define WZWUserKey @"user"
 #define WZWPwdKey @"pwd"
 #define WZWHaveLogined @"haveLogined"
+#define WZWPhotoData @"photoData"
 
 @implementation WZWAccount
 
@@ -30,6 +31,7 @@
             account.loginUser = [defaults objectForKey:WZWUserKey];
             account.loginPwd = [defaults objectForKey:WZWPwdKey];
             account.haveLogined = [defaults boolForKey:WZWHaveLogined];
+            account.photoData = [defaults dataForKey:WZWPhotoData];
         }
     });
     return account;
@@ -40,6 +42,7 @@
     [defaluts setObject:self.loginUser forKey:WZWUserKey];
     [defaluts setObject:self.loginPwd forKey:WZWPwdKey];
     [defaluts setBool:self.haveLogined forKey:WZWHaveLogined];
+    [defaluts setObject:self.photoData forKey:WZWPhotoData];
     [defaluts synchronize];
 }
 

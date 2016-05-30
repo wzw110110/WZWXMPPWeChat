@@ -10,14 +10,23 @@
 
 @interface DiscoveryController ()
 
+
 @end
 
 @implementation DiscoveryController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"发现";
+   //初始化界面
+    [self initView];
 
+}
+
+
+
+#pragma mark - 初始化界面
+-(void)initView{
+    self.title = @"发现";
 }
 
 @end

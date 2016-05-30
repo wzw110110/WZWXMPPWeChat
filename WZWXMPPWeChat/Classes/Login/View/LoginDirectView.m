@@ -19,7 +19,11 @@
 
 -(void)setUpView{
     UIImageView * photoView = [[UIImageView alloc]init];
-    photoView.backgroundColor = [UIColor redColor];
+    if ([WZWAccount shareAccount].photoData) {
+        photoView.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    }else{
+        photoView.image = [UIImage imageNamed:@"DefaultHead"];
+    }
     [self addSubview:photoView];
     [photoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
@@ -27,22 +31,21 @@
         make.size.mas_equalTo(CGSizeMake(80, 80));
     }];
     
-    UILabel * userLabel = [[UILabel alloc]init];
-    userLabel.text = @"wzw110301065";
-    userLabel.backgroundColor = [UIColor greenColor];
-    [self addSubview:userLabel];
-    [userLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    _userLabel = [[UILabel alloc]init];
+    _userLabel.text = [WZWAccount shareAccount].loginUser;
+    [self addSubview:_userLabel];
+    [_userLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.top.equalTo(photoView.mas_bottom).offset(15);
+        make.top.equalTo(photoView.mas_bottom).offset(10);
         make.height.mas_equalTo(20);
     }];
     
-    UITextField * pwd = [[UITextField alloc]init];
-    pwd.textAlignment = NSTextAlignmentCenter;
-    pwd.placeholder = @"请输入密码";
-    [self addSubview:pwd];
-    [pwd mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(userLabel.mas_bottom).offset(40);
+    _pwd = [[UITextField alloc]init];
+    _pwd.textAlignment = NSTextAlignmentCenter;
+    _pwd.placeholder = @"请输入密码";
+    [self addSubview:_pwd];
+    [_pwd mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_userLabel.mas_bottom).offset(40);
         make.left.equalTo(self).offset(15);
         make.right.equalTo(self).offset(-15);
     }];
@@ -51,9 +54,9 @@
     lineView.image = [UIImage imageNamed:@"AlbumCommentHorizontalLine"];
     [self addSubview:lineView];
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(pwd.mas_bottom).offset(2);
-        make.left.equalTo(pwd.mas_left);
-        make.right.equalTo(pwd.mas_right);
+        make.top.equalTo(_pwd.mas_bottom).offset(2);
+        make.left.equalTo(_pwd.mas_left);
+        make.right.equalTo(_pwd.mas_right);
         make.height.mas_equalTo(1);
     }];
     
@@ -61,19 +64,19 @@
     pwdLabel.text = @"密码";
     [self addSubview:pwdLabel];
     [pwdLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(pwd.mas_left);
+        make.left.equalTo(_pwd.mas_left);
         make.height.mas_equalTo(20);
-        make.bottom.equalTo(pwd.mas_bottom).offset(-1);
+        make.bottom.equalTo(_pwd.mas_bottom).offset(-1);
     }];
     
-    UIButton * loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-    [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [loginBtn setBackgroundColor:[UIColor greenColor]];
-    loginBtn.layer.cornerRadius = 10;
-    loginBtn.clipsToBounds = YES;
-    [self addSubview:loginBtn];
-    [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [_loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_loginBtn setBackgroundColor:[UIColor greenColor]];
+    _loginBtn.layer.cornerRadius = 10;
+    _loginBtn.clipsToBounds = YES;
+    [self addSubview:_loginBtn];
+    [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.left.equalTo(self).offset(20);
         make.right.equalTo(self).offset(-20);

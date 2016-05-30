@@ -55,16 +55,34 @@ singleton_implementation(XMPPTool)
     _xmppStream = [[XMPPStream alloc]init];
     //所有的代理方法都在子线程中调用
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
+    
+    //添加XMPP模块
+    //1、添加电子名片模块
+    _vCardStorage = [XMPPvCardCoreDataStorage sharedInstance];
+    _vCard = [[XMPPvCardTempModule alloc]initWithvCardStorage:_vCardStorage];
+    //激活
+    [_vCard activate:_xmppStream];
+    
+    //2、电子名片模块还会配置"头像模块"一起使用
+    //添加头像模块
+    _avatar = [[XMPPvCardAvatarModule alloc]initWithvCardTempModule:_vCard];
+    [_avatar activate:_xmppStream];
 }
 
 -(void)teardownStream{
     //移除代理
     [_xmppStream removeDelegate:self];
     //取消模块
+    [_vCard deactivate];
+    [_avatar deactivate];
+    [_avatar deactivate];
     //断开连接
     [_xmppStream disconnect];
     //清空资源
     _xmppStream = nil;
+    _vCard = nil;
+    _vCardStorage = nil;
+    _avatar = nil;
 }
 
 -(void)connectToHost{

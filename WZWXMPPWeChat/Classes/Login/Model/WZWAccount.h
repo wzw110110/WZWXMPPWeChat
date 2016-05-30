@@ -22,6 +22,8 @@
 
 //是否登录过
 @property (nonatomic,assign) BOOL haveLogined;
+//用户头像
+@property (nonatomic,strong) NSData * photoData;
 
 //单例
 +(instancetype)shareAccount;

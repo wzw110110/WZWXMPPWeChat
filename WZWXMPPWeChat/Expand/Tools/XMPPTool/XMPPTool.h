@@ -32,6 +32,13 @@ singleton_interface(XMPPTool)//设置成为单例
 @property (nonatomic,assign,getter=isRegisterOperation)BOOL registerOperation;
 
 /**
+ *  电子名片模块
+ */
+@property (nonatomic,strong,readonly) XMPPvCardTempModule * vCard;//电子名片模块
+@property (nonatomic,strong,readonly) XMPPvCardCoreDataStorage * vCardStorage;//电子名片的数据存储
+@property (nonatomic,strong,readonly) XMPPvCardAvatarModule * avatar;//电子名片的哦图像模块
+
+/**
  *  xmpp用户登录
  */
 -(void)xmppLogin:(XMPPResultTypeBlock)resultBlock;
