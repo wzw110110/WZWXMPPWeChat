@@ -209,6 +209,14 @@
 		B36377F81CF83D83002A02BC /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377F41CF83D83002A02BC /* MBProgressHUD+HM.m */; };
 		B36377F91CF83D83002A02BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B36377F51CF83D83002A02BC /* MBProgressHUD.bundle */; };
 		B36377FA1CF83D83002A02BC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377F71CF83D83002A02BC /* MBProgressHUD.m */; };
+		B3901FB11CFD1CA500AA1498 /* contacts_add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */; };
+		B3901FB51CFD1E7C00AA1498 /* AddFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */; };
+		B3901FBB1CFD20B000AA1498 /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FBA1CFD20B000AA1498 /* AddFriendCell.m */; };
+		B3901FBD1CFD219E00AA1498 /* add_friend_searchicon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FBC1CFD219E00AA1498 /* add_friend_searchicon.png */; };
+		B3901FBF1CFD3C7A00AA1498 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FBE1CFD3C7A00AA1498 /* LaunchImage-700-568h@2x.png */; };
+		B3901FC11CFD3CF000AA1498 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FC01CFD3CF000AA1498 /* LaunchImage@2x.png */; };
+		B3901FC31CFD3DB000AA1498 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FC21CFD3DB000AA1498 /* LaunchImage-700@2x.png */; };
+		B3901FC61CFD3ECF00AA1498 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FC51CFD3ECF00AA1498 /* FriendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -615,6 +623,17 @@
 		B36377F51CF83D83002A02BC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		B36377F61CF83D83002A02BC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B36377F71CF83D83002A02BC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts_add_friend.png; sourceTree = "<group>"; };
+		B3901FB31CFD1E7C00AA1498 /* AddFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendController.h; sourceTree = "<group>"; };
+		B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendController.m; sourceTree = "<group>"; };
+		B3901FB91CFD20B000AA1498 /* AddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendCell.h; sourceTree = "<group>"; };
+		B3901FBA1CFD20B000AA1498 /* AddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendCell.m; sourceTree = "<group>"; };
+		B3901FBC1CFD219E00AA1498 /* add_friend_searchicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_friend_searchicon.png; sourceTree = "<group>"; };
+		B3901FBE1CFD3C7A00AA1498 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		B3901FC01CFD3CF000AA1498 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		B3901FC21CFD3DB000AA1498 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		B3901FC41CFD3ECF00AA1498 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		B3901FC51CFD3ECF00AA1498 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +667,8 @@
 		B314A3B11CFBE318009FB6E3 /* default */ = {
 			isa = PBXGroup;
 			children = (
+				B3901FBC1CFD219E00AA1498 /* add_friend_searchicon.png */,
+				B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */,
 				B314A3BB1CFC1340009FB6E3 /* ScanDetailCellBgWithArrowLast.png */,
 				B314A3B71CFBE516009FB6E3 /* barbuttonicon_back.png */,
 				B314A3B81CFBE516009FB6E3 /* barbuttonicon_back@2x.png */,
@@ -823,6 +844,9 @@
 		B36373421CF7D6C9002A02BC /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				B3901FC01CFD3CF000AA1498 /* LaunchImage@2x.png */,
+				B3901FBE1CFD3C7A00AA1498 /* LaunchImage-700-568h@2x.png */,
+				B3901FC21CFD3DB000AA1498 /* LaunchImage-700@2x.png */,
 				B36373431CF7D6C9002A02BC /* AppIcon60x60@2x.png */,
 				B36373441CF7D6C9002A02BC /* AppIcon60x60@3x.png */,
 				B36373451CF7D6C9002A02BC /* AppIcon76x76@2x~ipad.png */,
@@ -850,6 +874,7 @@
 			isa = PBXGroup;
 			children = (
 				B363736C1CF7D78E002A02BC /* Controller */,
+				B3901FB21CFD1E4100AA1498 /* View */,
 			);
 			name = "Contact(通讯录)";
 			path = Contact;
@@ -860,6 +885,8 @@
 			children = (
 				B363737D1CF7DA4A002A02BC /* ContactController.h */,
 				B363737E1CF7DA4A002A02BC /* ContactController.m */,
+				B3901FB31CFD1E7C00AA1498 /* AddFriendController.h */,
+				B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1875,6 +1902,17 @@
 			path = MBProgessHUD;
 			sourceTree = "<group>";
 		};
+		B3901FB21CFD1E4100AA1498 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3901FB91CFD20B000AA1498 /* AddFriendCell.h */,
+				B3901FBA1CFD20B000AA1498 /* AddFriendCell.m */,
+				B3901FC41CFD3ECF00AA1498 /* FriendCell.h */,
+				B3901FC51CFD3ECF00AA1498 /* FriendCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1988,11 +2026,14 @@
 				B363735A1CF7D6C9002A02BC /* AlbumAddBtnHL.png in Resources */,
 				B314A3B31CFBE320009FB6E3 /* DefaultHead.png in Resources */,
 				B36373511CF7D6C9002A02BC /* AppIcon60x60@3x.png in Resources */,
+				B3901FC11CFD3CF000AA1498 /* LaunchImage@2x.png in Resources */,
 				B36373D21CF7E9DB002A02BC /* tabbar_me@2x.png in Resources */,
 				B36373FF1CF7F768002A02BC /* AlbumCommentHorizontalLine.png in Resources */,
 				B36373561CF7D6C9002A02BC /* Album_ToolViewEmotionHL.png in Resources */,
+				B3901FC31CFD3DB000AA1498 /* LaunchImage-700@2x.png in Resources */,
 				B36373581CF7D6C9002A02BC /* Album_ToolViewKeyboardHL.png in Resources */,
 				B36373CC1CF7E9DB002A02BC /* tabbar_discoverHL@2x.png in Resources */,
+				B3901FBF1CFD3C7A00AA1498 /* LaunchImage-700-568h@2x.png in Resources */,
 				B36373D41CF7E9DB002A02BC /* tabbar_meHL@2x.png in Resources */,
 				B36373CF1CF7E9DB002A02BC /* tabbar_mainframe@3x.png in Resources */,
 				B36377DB1CF82115002A02BC /* README.txt in Resources */,
@@ -2011,8 +2052,10 @@
 				B314A3BA1CFBE516009FB6E3 /* barbuttonicon_back@2x.png in Resources */,
 				B36373521CF7D6C9002A02BC /* AppIcon76x76@2x~ipad.png in Resources */,
 				B36377F91CF83D83002A02BC /* MBProgressHUD.bundle in Resources */,
+				B3901FB11CFD1CA500AA1498 /* contacts_add_friend.png in Resources */,
 				B36373541CF7D6C9002A02BC /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
 				B36373C61CF7E9DB002A02BC /* tabbar_contacts@2x.png in Resources */,
+				B3901FBD1CFD219E00AA1498 /* add_friend_searchicon.png in Resources */,
 				B363730B1CF7D4F6002A02BC /* Main.storyboard in Resources */,
 				B36373571CF7D6C9002A02BC /* Album_ToolViewKeyboard.png in Resources */,
 				B36373CD1CF7E9DB002A02BC /* tabbar_discoverHL@3x.png in Resources */,
@@ -2110,6 +2153,7 @@
 				B36377901CF82115002A02BC /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				B363777F1CF82115002A02BC /* XMPPRosterMemoryStorage.m in Sources */,
 				B36377991CF82115002A02BC /* XMPPvCardCoreDataStorage.m in Sources */,
+				B3901FC61CFD3ECF00AA1498 /* FriendCell.m in Sources */,
 				B36377BA1CF82115002A02BC /* XMPPMessageArchiving.m in Sources */,
 				B36377651CF82115002A02BC /* XMPPDigestMD5Authentication.m in Sources */,
 				B36377781CF82115002A02BC /* XMPPReconnect.m in Sources */,
@@ -2149,6 +2193,7 @@
 				B36377691CF82115002A02BC /* NSData+XMPP.m in Sources */,
 				B363778E1CF82115002A02BC /* XMPPRoomHybridStorage.m in Sources */,
 				B36377C91CF82115002A02BC /* NSXMLElement+XEP_0297.m in Sources */,
+				B3901FBB1CFD20B000AA1498 /* AddFriendCell.m in Sources */,
 				B36373F41CF7EF33002A02BC /* MASConstraint.m in Sources */,
 				B36377AA1CF82115002A02BC /* XMPPMessage+XEP_0066.m in Sources */,
 				B36377DA1CF82115002A02BC /* DispatchQueueLogFormatter.m in Sources */,
@@ -2199,6 +2244,7 @@
 				B36377DE1CF82115002A02BC /* DDXMLElement.m in Sources */,
 				B36377B91CF82115002A02BC /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				B36373F81CF7EF33002A02BC /* MASViewConstraint.m in Sources */,
+				B3901FB51CFD1E7C00AA1498 /* AddFriendController.m in Sources */,
 				B36377841CF82115002A02BC /* XMPPIQ+JabberRPCResonse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

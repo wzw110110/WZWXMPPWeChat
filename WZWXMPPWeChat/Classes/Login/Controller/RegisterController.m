@@ -67,6 +67,8 @@
             WZWTabbarController * wzwTabbar = [[WZWTabbarController alloc]init];
             [UIApplication sharedApplication].keyWindow.rootViewController = wzwTabbar;
 //            //将注册用户的数据保存到沙盒中，将状态显示为已登录
+            //将图片清空
+            [WZWAccount shareAccount].photoData = nil;
             [WZWAccount shareAccount].loginUser = _registerView.username.text;
             [WZWAccount shareAccount].loginPwd = _registerView.pwd.text;
             [WZWAccount shareAccount].haveLogined = YES;

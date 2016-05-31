@@ -63,7 +63,8 @@
             //跳到主界面
             WZWTabbarController * wzwTabbar = [[WZWTabbarController alloc]init];
             [UIApplication sharedApplication].keyWindow.rootViewController = wzwTabbar;
-            
+            //将图片清空
+            [WZWAccount shareAccount].photoData = nil;
             //保存登录账户的信息
             [WZWAccount shareAccount].haveLogined = YES;
             [[WZWAccount shareAccount]saveToSandBox];

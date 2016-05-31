@@ -13,6 +13,7 @@
 
 @interface MeController ()
 
+
 @end
 
 @implementation MeController
@@ -21,6 +22,11 @@
     [super viewDidLoad];
     //初始化界面
     [self initView];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - 表格视图代理方法
@@ -52,8 +58,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ProfileController * profileVC = [[ProfileController alloc]init];
-    [self.navigationController pushViewController:profileVC animated:YES];
+        ProfileController * profileVC = [[ProfileController alloc]init];
+        [self.navigationController pushViewController:profileVC animated:YES];
 }
 
 #pragma mark - 初始化界面

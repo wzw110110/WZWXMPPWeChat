@@ -38,6 +38,12 @@ singleton_interface(XMPPTool)//设置成为单例
 @property (nonatomic,strong,readonly) XMPPvCardCoreDataStorage * vCardStorage;//电子名片的数据存储
 @property (nonatomic,strong,readonly) XMPPvCardAvatarModule * avatar;//电子名片的哦图像模块
 
+@property (nonatomic,strong,readonly) XMPPRoster * roster;//花名册
+@property (nonatomic,strong,readonly) XMPPRosterCoreDataStorage * rosterStorage;//花名册数据存储
+
+@property (nonatomic,strong,readonly) XMPPMessageArchiving * msgArchiving;//聊天
+@property (nonatomic,strong,readonly) XMPPMessageArchivingCoreDataStorage * msgArchivingStorage;//聊天数据存储
+
 /**
  *  xmpp用户登录
  */

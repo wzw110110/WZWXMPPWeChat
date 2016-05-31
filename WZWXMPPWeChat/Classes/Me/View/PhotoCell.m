@@ -28,11 +28,12 @@
     }];
     
     _photoImg = [[UIImageView alloc]init];
+    _photoImg.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:_photoImg];
     
     [_photoImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView).offset(10);
-        make.right.equalTo(self.contentView).offset(-5);
+        make.right.mas_equalTo(self.contentView).offset(-10);
+        make.centerY.equalTo(self.contentView);
         make.height.mas_equalTo(60);
         make.width.mas_equalTo(60);
     }];

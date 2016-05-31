@@ -21,13 +21,16 @@
     [self initNavBar];
 }
 
+
 #pragma mark - 初始化导航栏
 -(void)initNavBar{
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+    UIView * view = [[UIView alloc]init];
+    self.tableView.tableFooterView = view;
 }
+
 
 #pragma mark - Table view data source
 

@@ -67,6 +67,16 @@ singleton_implementation(XMPPTool)
     //添加头像模块
     _avatar = [[XMPPvCardAvatarModule alloc]initWithvCardTempModule:_vCard];
     [_avatar activate:_xmppStream];
+    
+    //3、添加花名册模块
+    _rosterStorage = [[XMPPRosterCoreDataStorage alloc]init];
+    _roster = [[XMPPRoster alloc]initWithRosterStorage:_rosterStorage];
+    [_roster activate:_xmppStream];
+    
+    //4、添加聊天模块
+    _msgArchivingStorage = [[XMPPMessageArchivingCoreDataStorage alloc]init];
+    _msgArchiving = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_msgArchivingStorage];
+    [_msgArchiving activate:_xmppStream];
 }
 
 -(void)teardownStream{
@@ -76,6 +86,8 @@ singleton_implementation(XMPPTool)
     [_vCard deactivate];
     [_avatar deactivate];
     [_avatar deactivate];
+    [_roster deactivate];
+    [_msgArchiving deactivate];
     //断开连接
     [_xmppStream disconnect];
     //清空资源
@@ -83,6 +95,10 @@ singleton_implementation(XMPPTool)
     _vCard = nil;
     _vCardStorage = nil;
     _avatar = nil;
+    _roster = nil;
+    _rosterStorage = nil;
+    _msgArchiving = nil;
+    _msgArchivingStorage = nil;
 }
 
 -(void)connectToHost{

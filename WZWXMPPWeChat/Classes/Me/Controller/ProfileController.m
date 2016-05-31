@@ -29,6 +29,8 @@
     [super viewDidLoad];
    //初始化界面
     [self initView];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -52,9 +54,8 @@
     //用户名
     NSString * loginUser = [WZWAccount shareAccount].loginUser;
     //获取头像
-    _dataArray = @[@[photImg,myVCard.nickname,loginUser],@[myVCard.orgName!=nil?myVCard.orgName:@"",myVCard.orgUnits.count>0?myVCard.orgUnits[0]:@"",myVCard.title,myVCard.emailAddresses.count>0?myVCard.emailAddresses[0]:@""]];
-
-    
+    _dataArray = @[@[photImg,myVCard.nickname!=nil?myVCard.nickname:@"",loginUser!=nil?loginUser:@""],@[myVCard.orgName!=nil?myVCard.orgName:@"",myVCard.orgUnits.count>0?myVCard.orgUnits[0]:@"",myVCard.title!=nil?myVCard.title:@"",myVCard.emailAddresses.count>0?myVCard.emailAddresses[0]:@""]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - 表格视图代理方法
@@ -85,8 +86,12 @@
         if (!_photoCell) {
             _photoCell = [[PhotoCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"photoCell"];
         }
-        _photoCell.nameLabel.text = _titleArray[0][0];
-        _photoCell.imageView.image = _dataArray[0][0];
+        if (_titleArray.count>0) {
+            _photoCell.nameLabel.text = _titleArray[0][0];
+        }
+        if (_dataArray.count>0) {
+            _photoCell.photoImg.image = _dataArray[0][0];
+        }
         _photoCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return _photoCell;
     }else{
