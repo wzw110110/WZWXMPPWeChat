@@ -41,6 +41,7 @@
     
     _onlineLabel = [[UILabel alloc]init];
     _onlineLabel.font = [UIFont systemFontOfSize:13];
+    _onlineLabel.textColor = [UIColor lightGrayColor];
     [self.contentView addSubview:_onlineLabel];
     
     [_onlineLabel mas_makeConstraints:^(MASConstraintMaker *make) {

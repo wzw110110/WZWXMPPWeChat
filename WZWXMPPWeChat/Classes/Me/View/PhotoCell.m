@@ -28,7 +28,6 @@
     }];
     
     _photoImg = [[UIImageView alloc]init];
-    _photoImg.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:_photoImg];
     
     [_photoImg mas_makeConstraints:^(MASConstraintMaker *make) {

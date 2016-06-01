@@ -15,6 +15,10 @@
 #define WZWHostPort 5222
 //域名
 #define WZWDomain @"wuzhiwei.local"
+//屏幕宽
+#define WZWScreenW [UIScreen mainScreen].bounds.size.width
+//屏幕高
+#define WZWScreenH [UIScreen mainScreen].bounds.size.height
  
 
 

@@ -9,6 +9,7 @@
 #import "ContactController.h"
 #import "AddFriendController.h"
 #import "FriendCell.h"
+#import "ChatController.h"
 
 @interface ContactController ()<NSFetchedResultsControllerDelegate>
 
@@ -128,6 +129,32 @@
     return cell;
 }
 
+//删除好友
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    //获取好友
+    XMPPUserCoreDataStorageObject * friend = _resultController.fetchedObjects[indexPath.row];
+    //删除好友
+    if (editingStyle == UITableViewCellEditingStyleDelete ) {
+        [[XMPPTool sharedXMPPTool].roster removeUser:friend.jid];
+    }
+}
+
+//进入聊天界面
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    FriendCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    //获取好友
+    XMPPUserCoreDataStorageObject * friend = _resultController.fetchedObjects[indexPath.row];
+    ChatController * chatVC = [[ChatController alloc]init];
+    chatVC.friendJid = friend.jid;
+    chatVC.displayName = friend.displayName;
+    chatVC.photoImg = cell.photoImg.image;
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+}
+
 #pragma mark - 初始化界面
 -(void)initView{
     self.title = @"通讯录";
@@ -144,6 +171,7 @@
     AddFriendController * addVC = [[AddFriendController alloc]init];
     [self.navigationController pushViewController:addVC animated:YES];
 }
+
 
 
 @end
