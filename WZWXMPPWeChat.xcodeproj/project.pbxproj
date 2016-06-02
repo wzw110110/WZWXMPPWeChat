@@ -211,8 +211,16 @@
 		B36377F91CF83D83002A02BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B36377F51CF83D83002A02BC /* MBProgressHUD.bundle */; };
 		B36377FA1CF83D83002A02BC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377F71CF83D83002A02BC /* MBProgressHUD.m */; };
 		B3679AD11CFFD0030001E665 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AD01CFFD0030001E665 /* NSDate+MJ.m */; };
-		B36853AA1CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B36853A81CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png */; };
-		B36853AB1CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B36853A91CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png */; };
+		B3679ADB1D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AD41D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.m */; };
+		B3679ADC1D001C2B0001E665 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AD61D001C2B0001E665 /* UITableView+FDKeyedHeightCache.m */; };
+		B3679ADD1D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AD81D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.m */; };
+		B3679ADE1D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679ADA1D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		B3679AE41D0022400001E665 /* ReceiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AE11D0022400001E665 /* ReceiveCell.m */; };
+		B3679AE51D0022400001E665 /* SendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AE31D0022400001E665 /* SendCell.m */; };
+		B3679AE81D00226D0001E665 /* SendImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AE71D00226D0001E665 /* SendImageCell.m */; };
+		B3679AF11D0038310001E665 /* ReceiveImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AF01D0038310001E665 /* ReceiveImageCell.m */; };
+		B3679AFB1D0039ED0001E665 /* SenderAppCardNodeBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B3679AFA1D0039ED0001E665 /* SenderAppCardNodeBkg.png */; };
+		B3679AFD1D003BD00001E665 /* SenderImageNodeMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3679AFC1D003BD00001E665 /* SenderImageNodeMask@2x.png */; };
 		B3901FB11CFD1CA500AA1498 /* contacts_add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */; };
 		B3901FB51CFD1E7C00AA1498 /* AddFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */; };
 		B3901FBB1CFD20B000AA1498 /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FBA1CFD20B000AA1498 /* AddFriendCell.m */; };
@@ -231,16 +239,10 @@
 		B3901FD91CFD674000AA1498 /* ToolViewKeyboardHL.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FD31CFD674000AA1498 /* ToolViewKeyboardHL.png */; };
 		B3901FDB1CFD67A200AA1498 /* TypeSelectorBtn_Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FDA1CFD67A200AA1498 /* TypeSelectorBtn_Black@2x.png */; };
 		B3901FDD1CFD67AB00AA1498 /* TypeSelectorBtnHL_Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FDC1CFD67AB00AA1498 /* TypeSelectorBtnHL_Black@2x.png */; };
-		B3901FE91CFD801800AA1498 /* SendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FE81CFD801800AA1498 /* SendCell.m */; };
-		B3901FEC1CFD802700AA1498 /* ReceiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FEB1CFD802700AA1498 /* ReceiveCell.m */; };
 		B3901FEF1CFD87A200AA1498 /* ReceiverTextNodeBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FED1CFD87A200AA1498 /* ReceiverTextNodeBkg@2x.png */; };
 		B3901FF01CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FEE1CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png */; };
 		B3901FF31CFD87C400AA1498 /* SenderTextNodeBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FF11CFD87C400AA1498 /* SenderTextNodeBkg@2x.png */; };
 		B3901FF41CFD87C400AA1498 /* SenderTextNodeBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FF21CFD87C400AA1498 /* SenderTextNodeBkg@3x.png */; };
-		B39020091CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B39020021CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.m */; };
-		B390200A1CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B39020041CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.m */; };
-		B390200B1CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B39020061CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.m */; };
-		B390200C1CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = B39020081CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -651,8 +653,24 @@
 		B36377F71CF83D83002A02BC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B3679ACF1CFFD0030001E665 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
 		B3679AD01CFFD0030001E665 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
-		B36853A81CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkgHL@2x.png"; sourceTree = "<group>"; };
-		B36853A91CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkgHL@3x.png"; sourceTree = "<group>"; };
+		B3679AD31D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		B3679AD41D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		B3679AD51D001C2B0001E665 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		B3679AD61D001C2B0001E665 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		B3679AD71D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		B3679AD81D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		B3679AD91D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		B3679ADA1D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
+		B3679AE01D0022400001E665 /* ReceiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveCell.h; sourceTree = "<group>"; };
+		B3679AE11D0022400001E665 /* ReceiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveCell.m; sourceTree = "<group>"; };
+		B3679AE21D0022400001E665 /* SendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCell.h; sourceTree = "<group>"; };
+		B3679AE31D0022400001E665 /* SendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCell.m; sourceTree = "<group>"; };
+		B3679AE61D00226D0001E665 /* SendImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendImageCell.h; sourceTree = "<group>"; };
+		B3679AE71D00226D0001E665 /* SendImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendImageCell.m; sourceTree = "<group>"; };
+		B3679AEF1D0038310001E665 /* ReceiveImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveImageCell.h; sourceTree = "<group>"; };
+		B3679AF01D0038310001E665 /* ReceiveImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveImageCell.m; sourceTree = "<group>"; };
+		B3679AFA1D0039ED0001E665 /* SenderAppCardNodeBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderAppCardNodeBkg.png; sourceTree = "<group>"; };
+		B3679AFC1D003BD00001E665 /* SenderImageNodeMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderImageNodeMask@2x.png"; sourceTree = "<group>"; };
 		B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts_add_friend.png; sourceTree = "<group>"; };
 		B3901FB31CFD1E7C00AA1498 /* AddFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendController.h; sourceTree = "<group>"; };
 		B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendController.m; sourceTree = "<group>"; };
@@ -676,22 +694,10 @@
 		B3901FD31CFD674000AA1498 /* ToolViewKeyboardHL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolViewKeyboardHL.png; sourceTree = "<group>"; };
 		B3901FDA1CFD67A200AA1498 /* TypeSelectorBtn_Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TypeSelectorBtn_Black@2x.png"; sourceTree = "<group>"; };
 		B3901FDC1CFD67AB00AA1498 /* TypeSelectorBtnHL_Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TypeSelectorBtnHL_Black@2x.png"; sourceTree = "<group>"; };
-		B3901FE71CFD801800AA1498 /* SendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCell.h; sourceTree = "<group>"; };
-		B3901FE81CFD801800AA1498 /* SendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCell.m; sourceTree = "<group>"; };
-		B3901FEA1CFD802700AA1498 /* ReceiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveCell.h; sourceTree = "<group>"; };
-		B3901FEB1CFD802700AA1498 /* ReceiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveCell.m; sourceTree = "<group>"; };
 		B3901FED1CFD87A200AA1498 /* ReceiverTextNodeBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverTextNodeBkg@2x.png"; sourceTree = "<group>"; };
 		B3901FEE1CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverTextNodeBkg@3x.png"; sourceTree = "<group>"; };
 		B3901FF11CFD87C400AA1498 /* SenderTextNodeBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkg@2x.png"; sourceTree = "<group>"; };
 		B3901FF21CFD87C400AA1498 /* SenderTextNodeBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkg@3x.png"; sourceTree = "<group>"; };
-		B39020011CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
-		B39020021CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
-		B39020031CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
-		B39020041CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
-		B39020051CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
-		B39020061CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
-		B39020071CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
-		B39020081CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -894,7 +900,7 @@
 		B363733E1CF7D5BC002A02BC /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
-				B39020001CFD9BDF00AA1498 /* FDTemplateLayoutCel */,
+				B3679AD21D001C2B0001E665 /* FDTemplateLayoutCell */,
 				B36377F21CF83D83002A02BC /* MBProgessHUD */,
 				B36376141CF82115002A02BC /* XMPP */,
 				B36373DB1CF7EF33002A02BC /* Masonry */,
@@ -1986,19 +1992,46 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		B3679AD21D001C2B0001E665 /* FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				B3679AD31D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.h */,
+				B3679AD41D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.m */,
+				B3679AD51D001C2B0001E665 /* UITableView+FDKeyedHeightCache.h */,
+				B3679AD61D001C2B0001E665 /* UITableView+FDKeyedHeightCache.m */,
+				B3679AD71D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.h */,
+				B3679AD81D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.m */,
+				B3679AD91D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				B3679ADA1D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			path = FDTemplateLayoutCell;
+			sourceTree = "<group>";
+		};
+		B3679ADF1D0022400001E665 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				B3679AE01D0022400001E665 /* ReceiveCell.h */,
+				B3679AE11D0022400001E665 /* ReceiveCell.m */,
+				B3679AE21D0022400001E665 /* SendCell.h */,
+				B3679AE31D0022400001E665 /* SendCell.m */,
+				B3679AE61D00226D0001E665 /* SendImageCell.h */,
+				B3679AE71D00226D0001E665 /* SendImageCell.m */,
+				B3679AEF1D0038310001E665 /* ReceiveImageCell.h */,
+				B3679AF01D0038310001E665 /* ReceiveImageCell.m */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
 		B3901FB21CFD1E4100AA1498 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B3679ADF1D0022400001E665 /* MessageCell */,
 				B3901FB91CFD20B000AA1498 /* AddFriendCell.h */,
 				B3901FBA1CFD20B000AA1498 /* AddFriendCell.m */,
 				B3901FC41CFD3ECF00AA1498 /* FriendCell.h */,
 				B3901FC51CFD3ECF00AA1498 /* FriendCell.m */,
 				B3901FCA1CFD669100AA1498 /* ToolbarView.h */,
 				B3901FCB1CFD669100AA1498 /* ToolbarView.m */,
-				B3901FE71CFD801800AA1498 /* SendCell.h */,
-				B3901FE81CFD801800AA1498 /* SendCell.m */,
-				B3901FEA1CFD802700AA1498 /* ReceiveCell.h */,
-				B3901FEB1CFD802700AA1498 /* ReceiveCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2021,29 +2054,14 @@
 		B3901FDE1CFD7D5E00AA1498 /* chat */ = {
 			isa = PBXGroup;
 			children = (
-				B36853A81CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png */,
-				B36853A91CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png */,
+				B3679AFC1D003BD00001E665 /* SenderImageNodeMask@2x.png */,
+				B3679AFA1D0039ED0001E665 /* SenderAppCardNodeBkg.png */,
 				B3901FED1CFD87A200AA1498 /* ReceiverTextNodeBkg@2x.png */,
 				B3901FEE1CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png */,
 				B3901FF11CFD87C400AA1498 /* SenderTextNodeBkg@2x.png */,
 				B3901FF21CFD87C400AA1498 /* SenderTextNodeBkg@3x.png */,
 			);
 			path = chat;
-			sourceTree = "<group>";
-		};
-		B39020001CFD9BDF00AA1498 /* FDTemplateLayoutCel */ = {
-			isa = PBXGroup;
-			children = (
-				B39020011CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.h */,
-				B39020021CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.m */,
-				B39020031CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.h */,
-				B39020041CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.m */,
-				B39020051CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.h */,
-				B39020061CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.m */,
-				B39020071CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.h */,
-				B39020081CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.m */,
-			);
-			path = FDTemplateLayoutCel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2159,12 +2177,11 @@
 				B3901FF41CFD87C400AA1498 /* SenderTextNodeBkg@3x.png in Resources */,
 				B3901FF01CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png in Resources */,
 				B3901FEF1CFD87A200AA1498 /* ReceiverTextNodeBkg@2x.png in Resources */,
-				B36853AA1CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png in Resources */,
 				B3901FDB1CFD67A200AA1498 /* TypeSelectorBtn_Black@2x.png in Resources */,
 				B363735A1CF7D6C9002A02BC /* AlbumAddBtnHL.png in Resources */,
 				B314A3B31CFBE320009FB6E3 /* DefaultHead.png in Resources */,
 				B36373511CF7D6C9002A02BC /* AppIcon60x60@3x.png in Resources */,
-				B36853AB1CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png in Resources */,
+				B3679AFD1D003BD00001E665 /* SenderImageNodeMask@2x.png in Resources */,
 				B3901FDD1CFD67AB00AA1498 /* TypeSelectorBtnHL_Black@2x.png in Resources */,
 				B3901FC11CFD3CF000AA1498 /* LaunchImage@2x.png in Resources */,
 				B36373D21CF7E9DB002A02BC /* tabbar_me@2x.png in Resources */,
@@ -2192,6 +2209,7 @@
 				B36373D01CF7E9DB002A02BC /* tabbar_mainframeHL@2x.png in Resources */,
 				B363730D1CF7D4F6002A02BC /* Assets.xcassets in Resources */,
 				B36373CE1CF7E9DB002A02BC /* tabbar_mainframe@2x.png in Resources */,
+				B3679AFB1D0039ED0001E665 /* SenderAppCardNodeBkg.png in Resources */,
 				B36373551CF7D6C9002A02BC /* Album_ToolViewEmotion.png in Resources */,
 				B314A3BA1CFBE516009FB6E3 /* barbuttonicon_back@2x.png in Resources */,
 				B3901FF31CFD87C400AA1498 /* SenderTextNodeBkg@2x.png in Resources */,
@@ -2247,6 +2265,7 @@
 				B36377751CF82115002A02BC /* XMPPCoreDataStorage.m in Sources */,
 				B36377C61CF82115002A02BC /* XEP_0223.m in Sources */,
 				B363778C1CF82115002A02BC /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
+				B3679ADB1D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				B36377C71CF82115002A02BC /* XMPPAttentionModule.m in Sources */,
 				B363777C1CF82115002A02BC /* XMPPRosterCoreDataStorage.m in Sources */,
 				B36377C01CF82115002A02BC /* XMPPBlocking.m in Sources */,
@@ -2263,7 +2282,6 @@
 				B36377CC1CF82115002A02BC /* NSXMLElement+XEP_0335.m in Sources */,
 				B36377DC1CF82115002A02BC /* NSString+DDXML.m in Sources */,
 				B363737F1CF7DA4A002A02BC /* ContactController.m in Sources */,
-				B3901FE91CFD801800AA1498 /* SendCell.m in Sources */,
 				B36377B61CF82115002A02BC /* XMPPMessageArchiving.xcdatamodeld in Sources */,
 				B363779D1CF82115002A02BC /* XMPPvCardTempAdr.m in Sources */,
 				B36377CB1CF82115002A02BC /* XMPPMessage+XEP_0333.m in Sources */,
@@ -2283,13 +2301,13 @@
 				B363737C1CF7DA33002A02BC /* MainFrameController.m in Sources */,
 				B36373851CF7DA6C002A02BC /* MeController.m in Sources */,
 				B363777B1CF82115002A02BC /* XMPPRoster.xcdatamodel in Sources */,
-				B39020091CFD9BDF00AA1498 /* UITableView+FDIndexPathHeightCache.m in Sources */,
+				B3679AE51D0022400001E665 /* SendCell.m in Sources */,
 				B36377C81CF82115002A02BC /* XMPPMessage+XEP_0224.m in Sources */,
 				B36377941CF82115002A02BC /* XMPPMessage+XEP0045.m in Sources */,
 				B36377B31CF82115002A02BC /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				B36377961CF82115002A02BC /* XMPPRoom.m in Sources */,
+				B3679ADE1D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				B36377D61CF82115002A02BC /* DDFileLogger.m in Sources */,
-				B390200B1CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				B36377801CF82115002A02BC /* XMPPUserMemoryStorageObject.m in Sources */,
 				B36373F71CF7EF33002A02BC /* MASViewAttribute.m in Sources */,
 				B363779B1CF82115002A02BC /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
@@ -2328,6 +2346,7 @@
 				B36377F81CF83D83002A02BC /* MBProgressHUD+HM.m in Sources */,
 				B363776D1CF82115002A02BC /* XMPPIQ.m in Sources */,
 				B36377741CF82115002A02BC /* XMPPBandwidthMonitor.m in Sources */,
+				B3679AE41D0022400001E665 /* ReceiveCell.m in Sources */,
 				B36377C31CF82115002A02BC /* XMPPAutoTime.m in Sources */,
 				B36377B51CF82115002A02BC /* XMPPCapabilities.m in Sources */,
 				B36377971CF82115002A02BC /* XMPPvCard.xcdatamodeld in Sources */,
@@ -2352,7 +2371,6 @@
 				B36377AA1CF82115002A02BC /* XMPPMessage+XEP_0066.m in Sources */,
 				B36377DA1CF82115002A02BC /* DispatchQueueLogFormatter.m in Sources */,
 				B36377D01CF82115002A02BC /* XMPPIDTracker.m in Sources */,
-				B390200A1CFD9BDF00AA1498 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				B363778D1CF82115002A02BC /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				B36377E91CF825D3002A02BC /* XMPPTool.m in Sources */,
 				B36377B11CF82115002A02BC /* XMPPCapabilities.xcdatamodel in Sources */,
@@ -2371,7 +2389,6 @@
 				B36377AE1CF82115002A02BC /* XMPPSoftwareVersion.m in Sources */,
 				B363777D1CF82115002A02BC /* XMPPUserCoreDataStorageObject.m in Sources */,
 				B36377BB1CF82115002A02BC /* XMPPvCardAvatarModule.m in Sources */,
-				B390200C1CFD9BDF00AA1498 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				B36377731CF82115002A02BC /* XMPPStream.m in Sources */,
 				B36377711CF82115002A02BC /* XMPPParser.m in Sources */,
 				B36377A11CF82115002A02BC /* XMPPvCardTempLabel.m in Sources */,
@@ -2380,6 +2397,7 @@
 				B36377981CF82115002A02BC /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				B36377D21CF82115002A02BC /* XMPPStringPrep.m in Sources */,
 				B36377A71CF82115002A02BC /* XMPPPubSub.m in Sources */,
+				B3679AF11D0038310001E665 /* ReceiveImageCell.m in Sources */,
 				B36377BD1CF82115002A02BC /* XMPPPresence+XEP_0172.m in Sources */,
 				B36377C41CF82115002A02BC /* XMPPTime.m in Sources */,
 				B36377D51CF82115002A02BC /* DDASLLogger.m in Sources */,
@@ -2388,7 +2406,6 @@
 				B363779E1CF82115002A02BC /* XMPPvCardTempAdrTypes.m in Sources */,
 				B36377CF1CF82115002A02BC /* RFImageToDataTransformer.m in Sources */,
 				B36377AC1CF82115002A02BC /* XMPPDateTimeProfiles.m in Sources */,
-				B3901FEC1CFD802700AA1498 /* ReceiveCell.m in Sources */,
 				B36373081CF7D4F6002A02BC /* ViewController.m in Sources */,
 				B363779A1CF82115002A02BC /* XMPPvCardCoreDataStorageObject.m in Sources */,
 				B36377A21CF82115002A02BC /* XMPPvCardTempModule.m in Sources */,
@@ -2397,12 +2414,15 @@
 				B36377931CF82115002A02BC /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
 				B36377A61CF82115002A02BC /* XMPPIQ+XEP_0060.m in Sources */,
 				B36377F11CF83700002A02BC /* WZWAccount.m in Sources */,
+				B3679AE81D00226D0001E665 /* SendImageCell.m in Sources */,
 				B363733C1CF7D5B5002A02BC /* AppDelegate.m in Sources */,
 				B36377DE1CF82115002A02BC /* DDXMLElement.m in Sources */,
 				B36377B91CF82115002A02BC /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
+				B3679ADC1D001C2B0001E665 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				B36373F81CF7EF33002A02BC /* MASViewConstraint.m in Sources */,
 				B3901FB51CFD1E7C00AA1498 /* AddFriendController.m in Sources */,
 				B36377841CF82115002A02BC /* XMPPIQ+JabberRPCResonse.m in Sources */,
+				B3679ADD1D001C2B0001E665 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
