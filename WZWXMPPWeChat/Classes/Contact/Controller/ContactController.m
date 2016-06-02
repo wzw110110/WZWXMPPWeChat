@@ -17,10 +17,6 @@
     NSFetchedResultsController * _resultController;
 }
 
-/**
- *  所有好友
- */
-@property (nonatomic,strong)NSArray * friends;
 
 @end
 
@@ -57,11 +53,7 @@
     //过滤
     NSPredicate * pre = [NSPredicate predicateWithFormat:@"subscription != %@",@"none"];
     request.predicate = pre;
-    
     //3、执行请求
-    //创建结果控制器
-    //很多数据的时候，会放在子线程查询
-    //移动客户端的数据库里的数据不会狠多,所以很多数据的查询都在主线程
     _resultController = [[NSFetchedResultsController alloc]initWithFetchRequest:request managedObjectContext:rosterContext sectionNameKeyPath:nil cacheName:nil];
     _resultController.delegate = self;
     NSError * error = nil;

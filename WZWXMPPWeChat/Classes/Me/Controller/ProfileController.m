@@ -123,6 +123,7 @@
         UpdateInfoController * updateInfoVC = [[UpdateInfoController alloc]init];
         updateInfoVC.cell = _selectedCell;
         _selectedIndexPath = indexPath;
+        self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:updateInfoVC animated:YES];
         updateInfoVC.delegate = self;
     }

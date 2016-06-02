@@ -241,4 +241,5 @@ singleton_implementation(XMPPTool)
     [self teardownStream];
 }
 
+
 @end

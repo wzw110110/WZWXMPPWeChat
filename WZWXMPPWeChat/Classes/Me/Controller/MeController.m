@@ -59,7 +59,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         ProfileController * profileVC = [[ProfileController alloc]init];
+        self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:profileVC animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark - 初始化界面

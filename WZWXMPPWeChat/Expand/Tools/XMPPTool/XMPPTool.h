@@ -19,9 +19,7 @@ typedef enum {
 typedef void (^XMPPResultTypeBlock) (XMPPResultType);
 
 @interface XMPPTool : NSObject
-
 singleton_interface(XMPPTool)//设置成为单例
-
 @property (nonatomic,strong) XMPPStream * xmppStream;//与服务器交互的核心类
 
 /**

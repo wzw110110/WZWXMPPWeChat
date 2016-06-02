@@ -52,26 +52,28 @@
 
 #pragma mark - 加载数据库的聊天数据
 -(void)loadData{
-    //1、获取上下文
-    NSManagedObjectContext * msgContext = [XMPPTool sharedXMPPTool].msgArchivingStorage.mainThreadManagedObjectContext;
+    //加载数据库的聊天数据
     
-    //2、查询请求
-    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName:@"XMPPMessageArchiving_Message_CoreDataObject"];
+    // 1.上下文
+    NSManagedObjectContext *msgContext = [XMPPTool sharedXMPPTool].msgArchivingStorage.mainThreadManagedObjectContext;
     
-    //过滤数据（当前用户的聊天数据并且是好友的聊天信息）
-    NSString * loginUserJid = [XMPPTool sharedXMPPTool].xmppStream.myJID.bare;
-    NSPredicate * pre = [NSPredicate predicateWithFormat:@"streamBareJidStr = %@ AND bareJidStr = %@",loginUserJid,_friendJid.bare];
+    // 2.查询请求
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"XMPPMessageArchiving_Message_CoreDataObject"];
+    
+    // 过滤 （当前登录用户 并且 好友的聊天消息）
+    NSString *loginUserJid = [XMPPTool sharedXMPPTool].xmppStream.myJID.bare;
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"streamBareJidStr = %@ AND bareJidStr = %@",loginUserJid,_friendJid.bare];
     request.predicate = pre;
     
-    //设置时间排序，距离当前时间最近的聊天记录放在前面
-    NSSortDescriptor * timeSort = [NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES];
+    // 设置时间排序
+    NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES];
     request.sortDescriptors = @[timeSort];
     
-    //3、执行请求
-    _resultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:request managedObjectContext:msgContext sectionNameKeyPath:nil cacheName:nil];
+    // 3.执行请求
+    _resultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:msgContext sectionNameKeyPath:nil cacheName:nil];
     _resultsController.delegate = self;
-    NSError * error = nil;
-    [_resultsController performFetch:&error];
+    NSError *err = nil;
+    [_resultsController performFetch:&err];
 }
 
 //NSFetchedResultsController代理方法

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30595A01CFEEEF20090AC7B /* RecentChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B305959F1CFEEEF20090AC7B /* RecentChatCell.m */; };
 		B314A3B31CFBE320009FB6E3 /* DefaultHead.png in Resources */ = {isa = PBXBuildFile; fileRef = B314A3B21CFBE320009FB6E3 /* DefaultHead.png */; };
 		B314A3B61CFBE3F2009FB6E3 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = B314A3B51CFBE3F2009FB6E3 /* ProfileController.m */; };
 		B314A3B91CFBE516009FB6E3 /* barbuttonicon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B314A3B71CFBE516009FB6E3 /* barbuttonicon_back.png */; };
@@ -209,6 +210,7 @@
 		B36377F81CF83D83002A02BC /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377F41CF83D83002A02BC /* MBProgressHUD+HM.m */; };
 		B36377F91CF83D83002A02BC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B36377F51CF83D83002A02BC /* MBProgressHUD.bundle */; };
 		B36377FA1CF83D83002A02BC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B36377F71CF83D83002A02BC /* MBProgressHUD.m */; };
+		B3679AD11CFFD0030001E665 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AD01CFFD0030001E665 /* NSDate+MJ.m */; };
 		B36853AA1CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B36853A81CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png */; };
 		B36853AB1CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B36853A91CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png */; };
 		B3901FB11CFD1CA500AA1498 /* contacts_add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */; };
@@ -259,6 +261,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B305959E1CFEEEF20090AC7B /* RecentChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentChatCell.h; sourceTree = "<group>"; };
+		B305959F1CFEEEF20090AC7B /* RecentChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentChatCell.m; sourceTree = "<group>"; };
 		B314A3B21CFBE320009FB6E3 /* DefaultHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultHead.png; sourceTree = "<group>"; };
 		B314A3B41CFBE3F2009FB6E3 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
 		B314A3B51CFBE3F2009FB6E3 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
@@ -645,6 +649,8 @@
 		B36377F51CF83D83002A02BC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		B36377F61CF83D83002A02BC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B36377F71CF83D83002A02BC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B3679ACF1CFFD0030001E665 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		B3679AD01CFFD0030001E665 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
 		B36853A81CFE8BE000FBA04C /* SenderTextNodeBkgHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkgHL@2x.png"; sourceTree = "<group>"; };
 		B36853A91CFE8BE000FBA04C /* SenderTextNodeBkgHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkgHL@3x.png"; sourceTree = "<group>"; };
 		B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts_add_friend.png; sourceTree = "<group>"; };
@@ -716,6 +722,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B305959D1CFEEEAE0090AC7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B305959E1CFEEEF20090AC7B /* RecentChatCell.h */,
+				B305959F1CFEEEF20090AC7B /* RecentChatCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B314A3B11CFBE318009FB6E3 /* default */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +841,7 @@
 		B36373341CF7D5AF002A02BC /* Expand(扩展) */ = {
 			isa = PBXGroup;
 			children = (
+				B3679ACE1CFFCFD70001E665 /* Category(分类) */,
 				B36377EC1CF827B7002A02BC /* Macros(宏) */,
 				B36377EA1CF82773002A02BC /* SingleTon(单例) */,
 				B36377E41CF8251F002A02BC /* Tools(工具) */,
@@ -970,6 +986,7 @@
 			isa = PBXGroup;
 			children = (
 				B36373701CF7D78E002A02BC /* Controller */,
+				B305959D1CFEEEAE0090AC7B /* View */,
 			);
 			name = "MainFrame(微信)";
 			path = MainFrame;
@@ -1959,6 +1976,16 @@
 			path = MBProgessHUD;
 			sourceTree = "<group>";
 		};
+		B3679ACE1CFFCFD70001E665 /* Category(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				B3679ACF1CFFD0030001E665 /* NSDate+MJ.h */,
+				B3679AD01CFFD0030001E665 /* NSDate+MJ.m */,
+			);
+			name = "Category(分类)";
+			path = Category;
+			sourceTree = "<group>";
+		};
 		B3901FB21CFD1E4100AA1498 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2293,6 +2320,7 @@
 				B3901FC91CFD639200AA1498 /* ChatController.m in Sources */,
 				B363778F1CF82115002A02BC /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				B36377A51CF82115002A02BC /* XMPPResultSet.m in Sources */,
+				B3679AD11CFFD0030001E665 /* NSDate+MJ.m in Sources */,
 				B36377A31CF82115002A02BC /* XMPPvCardTempTel.m in Sources */,
 				B36377811CF82115002A02BC /* XMPPRoster.m in Sources */,
 				B36373821CF7DA5B002A02BC /* DiscoveryController.m in Sources */,
@@ -2305,6 +2333,7 @@
 				B36377971CF82115002A02BC /* XMPPvCard.xcdatamodeld in Sources */,
 				B36377C11CF82115002A02BC /* XMPPAutoPing.m in Sources */,
 				B36377B21CF82115002A02BC /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
+				B30595A01CFEEEF20090AC7B /* RecentChatCell.m in Sources */,
 				B36377DD1CF82115002A02BC /* DDXMLDocument.m in Sources */,
 				B36377791CF82115002A02BC /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				B36373F51CF7EF33002A02BC /* MASConstraintMaker.m in Sources */,
