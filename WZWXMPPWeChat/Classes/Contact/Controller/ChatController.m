@@ -16,7 +16,6 @@
 
 {
     NSFetchedResultsController * _resultsController;
-    CGFloat cellHeight;
 }
 
 @property (nonatomic,strong) ToolbarView * toolView;
@@ -131,18 +130,31 @@
 
 //键盘显示
 -(void)keyboardShow:(NSNotification *)note{
+    
+    //注意当切换输入法的时候也会调用这个方法
+    CGRect frame;
+    //将tableView的高度改成原来的值，防止切换中医文的时候，不停地调用这个方法，导致出现tableView的高度为0，出现黑屏
+    frame = self.tableView.frame;
+    frame.size.height=WZWScreenH-44;
+    self.tableView.frame = frame;
+    
+    frame = _toolView.frame;
+    frame.origin.y = WZWScreenH-44;
+    _toolView.frame = frame;
+    
     //获取键盘高度
     CGFloat kbHeight = [note.userInfo[UIKeyboardFrameEndUserInfoKey]CGRectValue].size.height;
-    CGRect frame = _toolView.frame;
+    frame = _toolView.frame;
     frame.origin.y-=kbHeight;
     _toolView.frame = frame;
     
-    //改变tableView的frame值
+//    //改变tableView的frame值
     frame = self.tableView.frame;
     frame.size.height-=kbHeight;
     self.tableView.frame = frame;
     
     [self setTableViewMoveToBottom];
+    
 }
 
 //键盘隐藏
@@ -189,7 +201,7 @@
     self.title = [_displayName stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"@%@",WZWDomain] withString:@""];
     UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftBtn setBackgroundImage:[UIImage imageNamed:@"barbuttonicon_back"] forState:UIControlStateNormal];
-    leftBtn.frame=CGRectMake(0, 0, 10, 20 );
+    leftBtn.frame=CGRectMake(0, 0, 10, 20);
     [leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftItem;

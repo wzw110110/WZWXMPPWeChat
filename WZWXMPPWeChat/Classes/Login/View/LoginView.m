@@ -35,7 +35,7 @@
     [remindLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.height.mas_equalTo(30);
-        make.top.equalTo(self).offset(60);
+        make.top.equalTo(self).offset(100);
     }];
     
     _username = [[UITextField alloc]init];

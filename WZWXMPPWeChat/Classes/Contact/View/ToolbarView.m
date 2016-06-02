@@ -53,7 +53,8 @@
     }];
     
     _contentTF = [[UITextField alloc]init];
-    _contentTF.backgroundColor = [UIColor redColor];
+    _contentTF.returnKeyType = UIReturnKeySend;
+    _contentTF.borderStyle = UITextBorderStyleRoundedRect;
     [self addSubview:_contentTF];
     
     [_contentTF mas_makeConstraints:^(MASConstraintMaker *make) {
