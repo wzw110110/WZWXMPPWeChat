@@ -23,6 +23,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setupUI];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
     return self;
@@ -34,7 +35,7 @@
     [self.contentView addSubview:_iconImgV];
     
     [_iconImgV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.contentView).offset(10);
+        make.right.equalTo(self.contentView).offset(-10);
         make.top.equalTo(self.contentView).offset(10);
         make.width.and.height.mas_equalTo(@(40));
     }];

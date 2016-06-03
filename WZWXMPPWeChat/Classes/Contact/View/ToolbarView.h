@@ -15,6 +15,7 @@
 @property (nonatomic,strong) UIButton * keyboardBtn;
 @property (nonatomic,strong) UIButton * typeSelectBtn;
 @property (nonatomic,strong) UITextField * contentTF;
+@property (nonatomic,strong) UIButton * sayBtn;
 
 
 @end

@@ -243,6 +243,12 @@
 		B3901FF01CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FEE1CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png */; };
 		B3901FF31CFD87C400AA1498 /* SenderTextNodeBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FF11CFD87C400AA1498 /* SenderTextNodeBkg@2x.png */; };
 		B3901FF41CFD87C400AA1498 /* SenderTextNodeBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FF21CFD87C400AA1498 /* SenderTextNodeBkg@3x.png */; };
+		B3B63D721D018192000FD814 /* SendVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B63D711D018192000FD814 /* SendVoiceCell.m */; };
+		B3B63D741D0181DA000FD814 /* SenderVoiceNodePlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = B3B63D731D0181DA000FD814 /* SenderVoiceNodePlaying.png */; };
+		B3B63D771D018813000FD814 /* SenderVoiceNodeBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3B63D751D018813000FD814 /* SenderVoiceNodeBack@2x.png */; };
+		B3B63D781D018813000FD814 /* SenderVoiceNodeBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3B63D761D018813000FD814 /* SenderVoiceNodeBack@3x.png */; };
+		B3B63D7B1D018C16000FD814 /* ReceiveVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B63D7A1D018C16000FD814 /* ReceiveVoiceCell.m */; };
+		B3B63D7D1D018CBA000FD814 /* ReceiverVoiceNodePlaying.png in Resources */ = {isa = PBXBuildFile; fileRef = B3B63D7C1D018CBA000FD814 /* ReceiverVoiceNodePlaying.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -698,6 +704,14 @@
 		B3901FEE1CFD87A200AA1498 /* ReceiverTextNodeBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverTextNodeBkg@3x.png"; sourceTree = "<group>"; };
 		B3901FF11CFD87C400AA1498 /* SenderTextNodeBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkg@2x.png"; sourceTree = "<group>"; };
 		B3901FF21CFD87C400AA1498 /* SenderTextNodeBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderTextNodeBkg@3x.png"; sourceTree = "<group>"; };
+		B3B63D701D018192000FD814 /* SendVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendVoiceCell.h; sourceTree = "<group>"; };
+		B3B63D711D018192000FD814 /* SendVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendVoiceCell.m; sourceTree = "<group>"; };
+		B3B63D731D0181DA000FD814 /* SenderVoiceNodePlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderVoiceNodePlaying.png; sourceTree = "<group>"; };
+		B3B63D751D018813000FD814 /* SenderVoiceNodeBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodeBack@2x.png"; sourceTree = "<group>"; };
+		B3B63D761D018813000FD814 /* SenderVoiceNodeBack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodeBack@3x.png"; sourceTree = "<group>"; };
+		B3B63D791D018C16000FD814 /* ReceiveVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveVoiceCell.h; sourceTree = "<group>"; };
+		B3B63D7A1D018C16000FD814 /* ReceiveVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveVoiceCell.m; sourceTree = "<group>"; };
+		B3B63D7C1D018CBA000FD814 /* ReceiverVoiceNodePlaying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReceiverVoiceNodePlaying.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2018,6 +2032,10 @@
 				B3679AE71D00226D0001E665 /* SendImageCell.m */,
 				B3679AEF1D0038310001E665 /* ReceiveImageCell.h */,
 				B3679AF01D0038310001E665 /* ReceiveImageCell.m */,
+				B3B63D701D018192000FD814 /* SendVoiceCell.h */,
+				B3B63D711D018192000FD814 /* SendVoiceCell.m */,
+				B3B63D791D018C16000FD814 /* ReceiveVoiceCell.h */,
+				B3B63D7A1D018C16000FD814 /* ReceiveVoiceCell.m */,
 			);
 			path = MessageCell;
 			sourceTree = "<group>";
@@ -2054,6 +2072,10 @@
 		B3901FDE1CFD7D5E00AA1498 /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				B3B63D7C1D018CBA000FD814 /* ReceiverVoiceNodePlaying.png */,
+				B3B63D751D018813000FD814 /* SenderVoiceNodeBack@2x.png */,
+				B3B63D761D018813000FD814 /* SenderVoiceNodeBack@3x.png */,
+				B3B63D731D0181DA000FD814 /* SenderVoiceNodePlaying.png */,
 				B3679AFC1D003BD00001E665 /* SenderImageNodeMask@2x.png */,
 				B3679AFA1D0039ED0001E665 /* SenderAppCardNodeBkg.png */,
 				B3901FED1CFD87A200AA1498 /* ReceiverTextNodeBkg@2x.png */,
@@ -2195,12 +2217,15 @@
 				B36373D41CF7E9DB002A02BC /* tabbar_meHL@2x.png in Resources */,
 				B36373CF1CF7E9DB002A02BC /* tabbar_mainframe@3x.png in Resources */,
 				B3901FD61CFD674000AA1498 /* ToolViewInputVoice.png in Resources */,
+				B3B63D781D018813000FD814 /* SenderVoiceNodeBack@3x.png in Resources */,
 				B36377DB1CF82115002A02BC /* README.txt in Resources */,
 				B36373401CF7D62F002A02BC /* Info.plist in Resources */,
 				B36373C81CF7E9DB002A02BC /* tabbar_contactsHL@2x.png in Resources */,
 				B36373591CF7D6C9002A02BC /* AlbumAddBtn.png in Resources */,
 				B36377E01CF82115002A02BC /* build-libidn.sh in Resources */,
 				B36373101CF7D4F6002A02BC /* LaunchScreen.storyboard in Resources */,
+				B3B63D7D1D018CBA000FD814 /* ReceiverVoiceNodePlaying.png in Resources */,
+				B3B63D771D018813000FD814 /* SenderVoiceNodeBack@2x.png in Resources */,
 				B36373CB1CF7E9DB002A02BC /* tabbar_discover@3x.png in Resources */,
 				B36373C91CF7E9DB002A02BC /* tabbar_contactsHL@3x.png in Resources */,
 				B36373D51CF7E9DB002A02BC /* tabbar_meHL@3x.png in Resources */,
@@ -2214,6 +2239,7 @@
 				B314A3BA1CFBE516009FB6E3 /* barbuttonicon_back@2x.png in Resources */,
 				B3901FF31CFD87C400AA1498 /* SenderTextNodeBkg@2x.png in Resources */,
 				B36373521CF7D6C9002A02BC /* AppIcon76x76@2x~ipad.png in Resources */,
+				B3B63D741D0181DA000FD814 /* SenderVoiceNodePlaying.png in Resources */,
 				B3901FD41CFD674000AA1498 /* ToolViewEmotion.png in Resources */,
 				B3901FD81CFD674000AA1498 /* ToolViewKeyboard.png in Resources */,
 				B36377F91CF83D83002A02BC /* MBProgressHUD.bundle in Resources */,
@@ -2265,6 +2291,7 @@
 				B36377751CF82115002A02BC /* XMPPCoreDataStorage.m in Sources */,
 				B36377C61CF82115002A02BC /* XEP_0223.m in Sources */,
 				B363778C1CF82115002A02BC /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
+				B3B63D7B1D018C16000FD814 /* ReceiveVoiceCell.m in Sources */,
 				B3679ADB1D001C2B0001E665 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				B36377C71CF82115002A02BC /* XMPPAttentionModule.m in Sources */,
 				B363777C1CF82115002A02BC /* XMPPRosterCoreDataStorage.m in Sources */,
@@ -2306,6 +2333,7 @@
 				B36377941CF82115002A02BC /* XMPPMessage+XEP0045.m in Sources */,
 				B36377B31CF82115002A02BC /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				B36377961CF82115002A02BC /* XMPPRoom.m in Sources */,
+				B3B63D721D018192000FD814 /* SendVoiceCell.m in Sources */,
 				B3679ADE1D001C2B0001E665 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				B36377D61CF82115002A02BC /* DDFileLogger.m in Sources */,
 				B36377801CF82115002A02BC /* XMPPUserMemoryStorageObject.m in Sources */,

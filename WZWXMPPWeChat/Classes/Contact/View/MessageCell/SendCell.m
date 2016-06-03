@@ -34,7 +34,7 @@
     }];
     
     _imgV = [[UIImageView alloc]init];
-    _imgV.image = [[UIImage imageNamed:@"SenderTextNodeBkgHL"]stretchableImageWithLeftCapWidth:30 topCapHeight:30];
+    _imgV.image = [[UIImage imageNamed:@"SenderTextNodeBkg"]stretchableImageWithLeftCapWidth:30 topCapHeight:30];
     [self.contentView addSubview:_imgV];
     
     _contentLabel = [[UILabel alloc]init];
