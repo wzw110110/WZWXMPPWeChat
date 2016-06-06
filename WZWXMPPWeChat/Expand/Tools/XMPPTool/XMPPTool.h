@@ -42,6 +42,9 @@ singleton_interface(XMPPTool)//设置成为单例
 @property (nonatomic,strong,readonly) XMPPMessageArchiving * msgArchiving;//聊天
 @property (nonatomic,strong,readonly) XMPPMessageArchivingCoreDataStorage * msgArchivingStorage;//聊天数据存储
 
+@property (nonatomic,strong,readonly) XMPPRoom * room;
+@property (nonatomic,strong,readonly) XMPPRoomCoreDataStorage * roomStorage;
+
 /**
  *  xmpp用户登录
  */

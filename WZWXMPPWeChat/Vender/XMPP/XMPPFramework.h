@@ -39,6 +39,10 @@
 #import "XMPPMessageArchiving.h"
 #import "XMPPMessageArchivingCoreDataStorage.h"
 
+//聊天室模块
+#import "XMPPRoom.h"
+#import "XMPPRoomCoreDataStorage.h"
+
 //自动连接
 #import "XMPPReconnect.h"
 
@@ -60,9 +64,9 @@
 //#import "XMPPPrivacy.h"
 //
 //#import "XMPPMUC.h"
-//#import "XMPPRoom.h"
+
 //#import "XMPPRoomMemoryStorage.h"
-//#import "XMPPRoomCoreDataStorage.h"
+
 //#import "XMPPRoomHybridStorage.h"
 //
 

@@ -11,5 +11,6 @@
 @interface SendVoiceCell : UITableViewCell
 
 @property (nonatomic,strong) UILabel * timeLabel;
+@property (nonatomic,strong) NSString * filePath;
 
 @end

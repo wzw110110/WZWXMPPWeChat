@@ -27,6 +27,9 @@
 @property (nonatomic,strong) UITableView * tableView;
 @property (nonatomic,strong) UIImage * megImage;
 @property (nonatomic,strong) AVAudioRecorder * recorder;
+@property (nonatomic,strong) AVAudioSession * session;
+@property (nonatomic,copy) NSString *fileURL;
+@property (nonatomic,assign) CGFloat voiceTime;
 
 @end
 
@@ -165,14 +168,16 @@
                 NSString * imgBase64Str = [node stringValue];
                 NSData * strData = [[NSData alloc]initWithBase64EncodedString:imgBase64Str options:0];
                 NSString * str = [[NSString alloc]initWithData:strData encoding:NSUTF8StringEncoding];
-                NSString * tempStr = [str componentsSeparatedByString:@"."][0];
-                currentTime = [NSString stringWithFormat:@"%@\"",tempStr];
+                currentTime = str;
             }
         }
         
         if (msgObj.isOutgoing) {
             SendVoiceCell * sendVoiceCell = [tableView dequeueReusableCellWithIdentifier:@"sendVoiceCell"];
-            sendVoiceCell.timeLabel.text = currentTime;
+            sendVoiceCell.timeLabel.text = nil;
+            NSString * tempStr = [msgObj.body componentsSeparatedByString:@"."][0];
+            sendVoiceCell.timeLabel.text = [NSString stringWithFormat:@"%@\"",tempStr];
+            sendVoiceCell.filePath = currentTime;
             return sendVoiceCell;
         }else{
             ReceiveVoiceCell * receiveVoiceCell = [tableView dequeueReusableCellWithIdentifier:@"receiveVoiceCell"];
@@ -264,7 +269,7 @@
     [msg addAttributeWithName:@"bodyType" stringValue:bodyType];
     
     //注意要添加body子节点，否则设置失败
-    [msg addBody:bodyType];
+    [msg addBody:[NSString stringWithFormat:@"%f",_voiceTime]];
     
     //把附件经过"base64编码"转成字符串
     NSString * base64Str = [data base64EncodedStringWithOptions:0];
@@ -317,7 +322,6 @@
 
 #pragma mark - 初始化界面
 -(void)initView{
-    
     _megImage = [[UIImage alloc]init];
     //tableView的设置
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, WZWScreenW, WZWScreenH-44) style:UITableViewStylePlain];
@@ -386,44 +390,36 @@
     NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     
     //拼接音频URL
-    NSString *fileURL = [doc stringByAppendingPathComponent:audioName];
+    _fileURL = [doc stringByAppendingPathComponent:audioName];
     
+    _session = [AVAudioSession sharedInstance];
+    NSError *sessionError;
+    [_session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
+    if(_session == nil)
+        NSLog(@"Error creating session: %@", [sessionError description]);
+    else
+        [_session setActive:YES error:nil];
     //录音设置
-    NSMutableDictionary *recordSetting  = [[NSMutableDictionary alloc] init];
-    //设置录音格式  AVFormatIDKey==kAudioFormatLinearPCM
-    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
-    //设置录音采样率(Hz) 如：AVSampleRateKey==8000/44100/96000（影响音频的质量）
-    [recordSetting setValue:[NSNumber numberWithFloat:44100] forKey:AVSampleRateKey];
-    //录音通道数  1 或 2
-    [recordSetting setValue:[NSNumber numberWithInt:1] forKey:AVNumberOfChannelsKey];
-    //线性采样位数  8、16、24、32
-    [recordSetting setValue:[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
-    //录音的质量
-    [recordSetting setValue:[NSNumber numberWithInt:AVAudioQualityHigh] forKey:AVEncoderAudioQualityKey];
-    //是否使用浮点数采样
-    [recordSetting setValue:@(YES) forKey:AVLinearPCMIsFloatKey];
-    
-    NSURL * URL = [NSURL fileURLWithPath:fileURL];
-    NSError * error = nil;
-    _recorder = [[AVAudioRecorder alloc]initWithURL:URL settings:recordSetting error:&error];
-    
-    if (error) {
-        NSLog(@"!!!!!!!!!!%@",error);
-    }
-    
-    //准备录音
+    NSMutableDictionary *settings = [[NSMutableDictionary alloc] init];
+    //录音格式 无法使用
+    [settings setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey: AVFormatIDKey];
+    //采样率
+    [settings setValue :[NSNumber numberWithFloat:11025.0] forKey: AVSampleRateKey];//44100.0
+    //通道数
+    [settings setValue :[NSNumber numberWithInt:2] forKey: AVNumberOfChannelsKey];
+    //音频质量,采样质量
+    [settings setValue:[NSNumber numberWithInt:AVAudioQualityMin] forKey:AVEncoderAudioQualityKey];
+    _recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:_fileURL] settings:settings error:nil];
     [_recorder prepareToRecord];
-    //开始录音
     [_recorder record];
 }
 
 //结束录音
 -(void)stopRecord{
     [_toolView.sayBtn setTitle:@"按住说话" forState:UIControlStateNormal];
-
-    NSString * str = [NSString stringWithFormat:@"%lf",self.recorder.currentTime];
-    NSData * data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * data = [_fileURL dataUsingEncoding:NSUTF8StringEncoding];
     [self sendAttachmentWithData:data bodyType:@"sound"];
+    _voiceTime = _recorder.currentTime;
     //结束录音
     [_recorder stop];
    

@@ -77,6 +77,11 @@ singleton_implementation(XMPPTool)
     _msgArchivingStorage = [[XMPPMessageArchivingCoreDataStorage alloc]init];
     _msgArchiving = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_msgArchivingStorage];
     [_msgArchiving activate:_xmppStream];
+    
+    //5、添加聊天室模块
+    _roomStorage = [[XMPPRoomCoreDataStorage alloc]init];
+    XMPPJID * jid = [XMPPJID jidWithString:[WZWAccount shareAccount].loginUser];
+    _room = [[XMPPRoom alloc]initWithRoomStorage:_roomStorage jid:jid];
 }
 
 -(void)teardownStream{
@@ -88,6 +93,7 @@ singleton_implementation(XMPPTool)
     [_avatar deactivate];
     [_roster deactivate];
     [_msgArchiving deactivate];
+    [_room deactivate];
     //断开连接
     [_xmppStream disconnect];
     //清空资源
@@ -99,6 +105,8 @@ singleton_implementation(XMPPTool)
     _rosterStorage = nil;
     _msgArchiving = nil;
     _msgArchivingStorage = nil;
+    _room = nil;
+    _roomStorage = nil;
 }
 
 -(void)connectToHost{

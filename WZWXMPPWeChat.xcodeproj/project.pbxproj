@@ -221,6 +221,7 @@
 		B3679AF11D0038310001E665 /* ReceiveImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3679AF01D0038310001E665 /* ReceiveImageCell.m */; };
 		B3679AFB1D0039ED0001E665 /* SenderAppCardNodeBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = B3679AFA1D0039ED0001E665 /* SenderAppCardNodeBkg.png */; };
 		B3679AFD1D003BD00001E665 /* SenderImageNodeMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3679AFC1D003BD00001E665 /* SenderImageNodeMask@2x.png */; };
+		B368ACE11D054B8000A00CA7 /* 20160606101230.caf in Resources */ = {isa = PBXBuildFile; fileRef = B368ACE01D054B8000A00CA7 /* 20160606101230.caf */; };
 		B3901FB11CFD1CA500AA1498 /* contacts_add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */; };
 		B3901FB51CFD1E7C00AA1498 /* AddFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */; };
 		B3901FBB1CFD20B000AA1498 /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3901FBA1CFD20B000AA1498 /* AddFriendCell.m */; };
@@ -677,6 +678,7 @@
 		B3679AF01D0038310001E665 /* ReceiveImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveImageCell.m; sourceTree = "<group>"; };
 		B3679AFA1D0039ED0001E665 /* SenderAppCardNodeBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SenderAppCardNodeBkg.png; sourceTree = "<group>"; };
 		B3679AFC1D003BD00001E665 /* SenderImageNodeMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderImageNodeMask@2x.png"; sourceTree = "<group>"; };
+		B368ACE01D054B8000A00CA7 /* 20160606101230.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 20160606101230.caf; sourceTree = "<group>"; };
 		B3901FB01CFD1CA500AA1498 /* contacts_add_friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts_add_friend.png; sourceTree = "<group>"; };
 		B3901FB31CFD1E7C00AA1498 /* AddFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendController.h; sourceTree = "<group>"; };
 		B3901FB41CFD1E7C00AA1498 /* AddFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendController.m; sourceTree = "<group>"; };
@@ -802,6 +804,7 @@
 		B36372FF1CF7D4F6002A02BC /* WZWXMPPWeChat */ = {
 			isa = PBXGroup;
 			children = (
+				B368ACE01D054B8000A00CA7 /* 20160606101230.caf */,
 				B36373331CF7D5A1002A02BC /* Classes(主要) */,
 				B36373341CF7D5AF002A02BC /* Expand(扩展) */,
 				B36373351CF7D5B5002A02BC /* Resource(资源) */,
@@ -2216,6 +2219,7 @@
 				B3901FD91CFD674000AA1498 /* ToolViewKeyboardHL.png in Resources */,
 				B36373D41CF7E9DB002A02BC /* tabbar_meHL@2x.png in Resources */,
 				B36373CF1CF7E9DB002A02BC /* tabbar_mainframe@3x.png in Resources */,
+				B368ACE11D054B8000A00CA7 /* 20160606101230.caf in Resources */,
 				B3901FD61CFD674000AA1498 /* ToolViewInputVoice.png in Resources */,
 				B3B63D781D018813000FD814 /* SenderVoiceNodeBack@3x.png in Resources */,
 				B36377DB1CF82115002A02BC /* README.txt in Resources */,
