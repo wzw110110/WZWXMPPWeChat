@@ -26,14 +26,19 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setupUI];
-//        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
 
 -(void)setupUI{
     _photoImgV = [[UIImageView alloc]init];
-    _photoImgV.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    NSData * photoData = [WZWAccount shareAccount].photoData;
+    if (photoData) {
+        _photoImgV.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    }else{
+        _photoImgV.image = [UIImage imageNamed:@"DefaultHead.png"];
+    }
     [self.contentView addSubview:_photoImgV];
     
     [_photoImgV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -50,7 +55,7 @@
     
     [_iconBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_photoImgV);
-        make.right.equalTo(_photoImgV.mas_left);
+        make.right.equalTo(_photoImgV.mas_left).offset(-5);
         make.bottom.equalTo(_photoImgV).offset(10);
         make.width.mas_equalTo(@60);
     }];
@@ -83,7 +88,8 @@
 
 
 -(void)iconBtnClick{
-#warning 新录制的音频可以，但是一旦重启模拟器就不行
+#warning 新录制的音频可以，但是一旦重启模拟器就不行，不知道为什么，音频文件没有上传到服务器，是直接从真机上面读取的
+    NSLog(@"###########%@",_filePath);
     NSError * error;
     if (_filePath) {
         NSData * data = [[NSData alloc] initWithContentsOfFile:_filePath];

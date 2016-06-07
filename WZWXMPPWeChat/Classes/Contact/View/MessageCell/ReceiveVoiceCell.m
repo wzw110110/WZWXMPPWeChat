@@ -7,12 +7,14 @@
 //
 
 #import "ReceiveVoiceCell.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ReceiveVoiceCell ()
 
-@property (nonatomic,strong) UIImageView * photoImgV;
-@property (nonatomic,strong) UIImageView * iconImgV;
+@property (nonatomic,strong) UIButton * iconBtn;
 @property (nonatomic,strong) UIImageView * wifiImgV;
+/** 播放器 */
+@property(nonatomic,strong) AVAudioPlayer *player;
 
 @end
 
@@ -29,7 +31,6 @@
 
 -(void)setupUI{
     _photoImgV = [[UIImageView alloc]init];
-    _photoImgV.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
     [self.contentView addSubview:_photoImgV];
     
     [_photoImgV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -38,11 +39,12 @@
         make.width.and.height.mas_equalTo(@40);
     }];
     
-    _iconImgV = [[UIImageView alloc]init];
-    _iconImgV.image = [UIImage imageNamed:@"ReceiverTextNodeBkg"];
-    [self.contentView addSubview:_iconImgV];
+    _iconBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_iconBtn setBackgroundImage:[UIImage imageNamed:@"ReceiverTextNodeBkg"] forState:UIControlStateNormal];
+    [_iconBtn addTarget:self action:@selector(iconBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:_iconBtn];
     
-    [_iconImgV mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_iconBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_photoImgV);
         make.left.equalTo(_photoImgV.mas_right);
         make.bottom.equalTo(_photoImgV).offset(10);
@@ -54,8 +56,8 @@
     [self.contentView addSubview:_wifiImgV];
     
     [_wifiImgV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(_iconImgV).offset(-5);
-        make.left.equalTo(_iconImgV.mas_left).offset(15);
+        make.centerY.equalTo(_iconBtn).offset(-5);
+        make.left.equalTo(_iconBtn.mas_left).offset(15);
         make.width.mas_equalTo(@12);
         make.height.mas_equalTo(@17);
     }];
@@ -67,10 +69,29 @@
     [self.contentView addSubview:_timeLabel];
     
     [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(_iconImgV.mas_bottom).offset(-15);
-        make.left.equalTo(_iconImgV.mas_right);
+        make.bottom.equalTo(_iconBtn.mas_bottom).offset(-15);
+        make.left.equalTo(_iconBtn.mas_right);
         make.height.mas_equalTo(@20);
     }];
+}
+
+-(void)iconBtnClick{
+#warning 新录制的音频可以，但是一旦重启模拟器就不行，不知道为什么，音频文件没有上传到服务器，是直接从真机上面读取的
+    NSLog(@"###########%@",_filePath);
+    NSError * error;
+    if (_filePath) {
+        NSData * data = [[NSData alloc] initWithContentsOfFile:_filePath];
+        _player = [[AVAudioPlayer alloc]initWithData:data error:&error];;
+        if (error) {
+            NSLog(@"%@",error);
+        }
+        [_player play];
+    }
+    
+}
+
+-(void)setFilePath:(NSString *)filePath{
+    _filePath = filePath;
 }
 
 @end

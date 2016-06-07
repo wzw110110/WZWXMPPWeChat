@@ -43,7 +43,7 @@
     [self.contentView addSubview:_contentLabel];
     
     [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_photoImg.mas_right).offset(20);
+        make.left.equalTo(_photoImg.mas_right).offset(15);
         make.top.equalTo(_photoImg).offset(5);
         make.width.lessThanOrEqualTo(@(WZWScreenW-150));
         make.bottom.equalTo(@-20);

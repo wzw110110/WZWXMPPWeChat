@@ -31,7 +31,12 @@
 
 -(void)setupUI{
     _iconImgV = [[UIImageView alloc]init];
-    _iconImgV.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    NSData * photoData = [WZWAccount shareAccount].photoData;
+    if (photoData) {
+        _iconImgV.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    }else{
+        _iconImgV.image = [UIImage imageNamed:@"DefaultHead.png"];
+    }
     [self.contentView addSubview:_iconImgV];
     
     [_iconImgV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -48,16 +53,16 @@
     [self.contentView addSubview:_imgV];
     
     [_imgV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_iconImgV).offset(10);
-        make.right.equalTo(_iconImgV.mas_left).offset(-15);
+        make.top.equalTo(_iconImgV).offset(2);
+        make.right.equalTo(_iconImgV.mas_left).offset(-20);
         make.width.and.height.mas_equalTo(@100);
     }];
 
     
     [_senderImgV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_iconImgV.mas_top);
-        make.right.equalTo(_imgV.mas_right).offset(15);
-        make.width.and.height.mas_equalTo(@128);
+        make.right.equalTo(_imgV.mas_right).offset(8);
+        make.left.equalTo(_imgV.mas_left).offset(-2);
     }];
 }
 
@@ -69,7 +74,7 @@
     }];
     
     [_senderImgV mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(sendImg.size.height/sendImg.size.width*100.0 + 25);
+        make.height.mas_equalTo(sendImg.size.height/sendImg.size.width*100.0+4);
     }];
 }
 

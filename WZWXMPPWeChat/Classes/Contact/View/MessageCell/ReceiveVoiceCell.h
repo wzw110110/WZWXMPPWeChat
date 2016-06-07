@@ -11,5 +11,7 @@
 @interface ReceiveVoiceCell : UITableViewCell
 
 @property (nonatomic,strong) UILabel * timeLabel;
+@property (nonatomic,strong) NSString * filePath;
+@property (nonatomic,strong) UIImageView * photoImgV;
 
 @end

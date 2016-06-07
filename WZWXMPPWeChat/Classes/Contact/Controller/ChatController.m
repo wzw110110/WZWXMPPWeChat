@@ -52,11 +52,14 @@
 }
 
 -(void)setTableViewMoveToBottom{
-    //滚动到最末端
-    NSIndexPath * lastIndexPath = [NSIndexPath indexPathForRow:_resultsController.fetchedObjects.count-1 inSection:0];
-    if (lastIndexPath.row >0) {
+    
+    NSInteger count = _resultsController.fetchedObjects.count;
+    if (count>3) {
+        //滚动到最末端
+        NSIndexPath * lastIndexPath = [NSIndexPath indexPathForRow:count-1 inSection:0];
         [self.tableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }
+    
 }
 
 #pragma mark - 加载数据库的聊天数据
@@ -102,7 +105,7 @@
     //获取附件的类型
     NSString * bodyType = [message attributeStringValueForName:@"bodyType"];
     if ([bodyType isEqualToString:@"image"]) {
-        return 200;
+        return 180;
     }else if([bodyType isEqualToString:@"voice"]){
         return 60;
     }else{
@@ -181,7 +184,10 @@
             return sendVoiceCell;
         }else{
             ReceiveVoiceCell * receiveVoiceCell = [tableView dequeueReusableCellWithIdentifier:@"receiveVoiceCell"];
-            receiveVoiceCell.timeLabel.text = currentTime;
+            NSString * tempStr = [msgObj.body componentsSeparatedByString:@"."][0];
+            receiveVoiceCell.timeLabel.text = [NSString stringWithFormat:@"%@\"",tempStr];
+            receiveVoiceCell.filePath = currentTime;
+            receiveVoiceCell.photoImgV.image = _photoImg;
             return receiveVoiceCell;
         }
         
@@ -269,7 +275,8 @@
     [msg addAttributeWithName:@"bodyType" stringValue:bodyType];
     
     //注意要添加body子节点，否则设置失败
-    [msg addBody:[NSString stringWithFormat:@"%f",_voiceTime]];
+//    [msg addBody:[NSString stringWithFormat:@"%f",_voiceTime+1]];
+    [msg addBody:bodyType];
     
     //把附件经过"base64编码"转成字符串
     NSString * base64Str = [data base64EncodedStringWithOptions:0];
@@ -323,6 +330,12 @@
 #pragma mark - 初始化界面
 -(void)initView{
     _megImage = [[UIImage alloc]init];
+    UIImage * img = [UIImage imageNamed:@"DefaultHead.png"];
+    
+    if (!_photoImg) {
+        _photoImg = img;
+    }
+    
     //tableView的设置
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, WZWScreenW, WZWScreenH-44) style:UITableViewStylePlain];
     self.tableView.separatorStyle =UITableViewCellSeparatorStyleNone;
@@ -387,7 +400,7 @@
     
     //doc目录
     
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *doc = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES)[0];
     
     //拼接音频URL
     _fileURL = [doc stringByAppendingPathComponent:audioName];

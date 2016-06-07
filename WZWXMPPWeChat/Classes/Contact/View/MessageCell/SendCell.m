@@ -61,7 +61,12 @@
 }
 
 -(void)updateCellHeight:(XMPPMessageArchiving_Message_CoreDataObject *)msgObj{
-     _photoImg.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    NSData * photoData = [WZWAccount shareAccount].photoData;
+    if (photoData) {
+        _photoImg.image = [UIImage imageWithData:[WZWAccount shareAccount].photoData];
+    }else{
+        _photoImg.image = [UIImage imageNamed:@"DefaultHead.png"];
+    }
     _contentLabel.text = msgObj.body;
   
 }

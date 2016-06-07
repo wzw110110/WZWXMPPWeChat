@@ -47,20 +47,23 @@
     [self.contentView addSubview:_imgV];
     
     [_imgV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_iconImgV).offset(10);
-        make.left.equalTo(_iconImgV.mas_right).offset(15);
+        make.top.equalTo(_iconImgV).offset(2);
+        make.left.equalTo(_iconImgV.mas_right).offset(10);
         make.width.and.height.mas_equalTo(@100);
     }];
     
     
     [_senderImgV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_iconImgV.mas_top);
-        make.left.equalTo(_imgV.mas_left).offset(-15);
-        make.width.and.height.mas_equalTo(@128);
+        make.left.equalTo(_imgV.mas_left).offset(8);
+        make.right.equalTo(_imgV.mas_right).offset(-2);
+        make.height.mas_equalTo(@100);
     }];
 }
 
 -(void)setReceiveImg:(UIImage *)receiveImg{
+    
+    
     _imgV.image = receiveImg;
     
     [_imgV mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -68,7 +71,7 @@
     }];
     
     [_senderImgV mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(receiveImg.size.height/receiveImg.size.width*100.0 + 28);
+        make.height.mas_equalTo(receiveImg.size.height/receiveImg.size.width*100.0 + 4);
     }];
 }
 
