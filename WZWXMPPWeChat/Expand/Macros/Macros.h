@@ -10,7 +10,7 @@
 #define Macros_h
 
 //主机地址
-#define WZWHostName @"192.168.1.113"
+#define WZWHostName @"192.168.1.110"
 //主机端口号(openfire默认是5222)
 #define WZWHostPort 5222
 //域名

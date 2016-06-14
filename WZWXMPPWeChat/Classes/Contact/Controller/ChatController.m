@@ -217,7 +217,7 @@
     
     //注意当切换输入法的时候也会调用这个方法
     CGRect frame;
-    //将tableView的高度改成原来的值，防止切换中医文的时候，不停地调用这个方法，导致出现tableView的高度为0，出现黑屏
+    //将tableView的高度改成原来的值，防止切换中英文的时候，不停地调用这个方法，导致出现tableView的高度为0，出现黑屏
     frame = self.tableView.frame;
     frame.size.height=WZWScreenH-44;
     self.tableView.frame = frame;
